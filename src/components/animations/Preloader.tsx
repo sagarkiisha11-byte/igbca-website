@@ -29,8 +29,8 @@ export const INTRO = {
   lineDraw: 0.55,
 
   // Hold & Exit
-  holdDuration: 1000, // ms before exit starts (~1.0s)
-  exitDuration: 0.6, // s
+  hold: 1000, // ms before exit starts (~1.0s)
+  exit: 0.6, // s
   exitEase: [0.76, 0, 0.24, 1] as const,
 
   // Prefers Reduced Motion
@@ -57,7 +57,7 @@ export default function Preloader() {
     setIsReducedMotion(mq.matches);
 
     // Sequence timer: hold until ~1.0s, then begin exit curtain
-    const holdDuration = mq.matches ? INTRO.reducedHold : INTRO.holdDuration;
+    const holdDuration = mq.matches ? INTRO.reducedHold : INTRO.hold;
     const timer = setTimeout(() => {
       setIntroExiting(true);
     }, holdDuration);
@@ -106,7 +106,7 @@ export default function Preloader() {
               : {
                   y: "-100%",
                   transition: {
-                    duration: INTRO.exitDuration,
+                    duration: INTRO.exit,
                     ease: INTRO.exitEase,
                   },
                 }
