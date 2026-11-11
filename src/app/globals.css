@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-cream: #FBF6EE;
+  --color-espresso: #2B1810;
+  --color-chocolate: #4A2C1A;
+  --color-gold: #C8963E;
+  --color-blush: #F3D9CF;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    color: #2B1810;
+    background-color: #FBF6EE;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #C8963E;
+    color: #FFFFFF;
+  }
+
+  /* Accessible focus styling: mouse clicks never show an outline, keyboard users get clean focus rings */
+  a:focus:not(:focus-visible),
+  button:focus:not(:focus-visible),
+  [tabindex]:focus:not(:focus-visible) {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  a, button, input, textarea, select {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F5EAD8;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #C8963E;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B38230;
+  }
+}
+
+@layer components {
+  /* Glass navbar */
+  .glass-nav {
+    background: rgba(251, 246, 238, 0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(200, 150, 62, 0.2);
+  }
+
+  .glass-nav-dark {
+    background: rgba(26, 15, 10, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(200, 150, 62, 0.25);
+  }
+
+  /* Glass cards - clean solid backgrounds without expensive backdrop-filter */
+  .glass-card-dark {
+    background: rgba(35, 19, 13, 0.92);
+    border: 1px solid rgba(200, 150, 62, 0.25);
+  }
+
+  .glass-card-light {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(200, 150, 62, 0.2);
+  }
+
+  /* Gold shine button with subtle inner highlight */
+  .btn-gold-shine {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(200, 150, 62, 0.28), inset 0 1px 1px rgba(255, 255, 255, 0.45);
+  }
+
+  .btn-gold-shine::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.35),
+      transparent
+    );
+    transform: skewX(-20deg);
+    transition: 0.6s ease;
+  }
+
+  .btn-gold-shine:hover::after {
+    left: 140%;
+  }
+
+  /* Glass secondary outline button */
+  .btn-glass-outline {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(200, 150, 62, 0.4);
+    color: #FBF6EE;
+    transition: all 0.3s ease;
+  }
+
+  .btn-glass-outline:hover {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: #DFB15B;
+    color: #FFFFFF;
+  }
+
+  /* Thin gold ornamental divider */
+  .gold-divider {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(200, 150, 62, 0.6) 50%,
+      transparent 100%
+    );
+  }
+
+  /* Text gradients */
+  .text-gradient-gold,
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #DFB15B 0%, #C8963E 50%, #B38230 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-bronze {
+    background: linear-gradient(135deg, #F3D9CF 0%, #DFB15B 60%, #C8963E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Section transition fades */
+  .transition-fade-dark-to-cream {
+    background: linear-gradient(180deg, #1A0F0A 0%, #2B1810 40%, #FBF6EE 100%);
+  }
+
+  .transition-fade-cream-to-dark {
+    background: linear-gradient(180deg, #FBF6EE 0%, #2B1810 60%, #1A0F0A 100%);
+  }
+
+  /* Shimmer gradient sweep for key words like 'Art' */
+  @keyframes goldShimmer {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(
+      90deg,
+      #DFB15B 0%,
+      #FFE8A3 30%,
+      #DFB15B 60%,
+      #C8963E 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: goldShimmer 5s ease-in-out infinite;
+  }
+
+  /* Subtle noise/grain texture overlay */
+  .noise-overlay {
+    background-image: radial-gradient(rgba(200, 150, 62, 0.08) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
