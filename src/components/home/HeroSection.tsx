@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { useEnquiry } from "@/context/EnquiryContext";
+import { useIntro } from "@/context/IntroContext";
 import SplitText from "@/components/animations/SplitText";
 import Magnetic from "@/components/animations/Magnetic";
 
@@ -33,6 +34,8 @@ const heroSlides = [
 
 export default function HeroSection() {
   const { openEnquiryModal } = useEnquiry();
+  const { introExiting, introDone } = useIntro();
+  const heroReady = introExiting || introDone;
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isFinePointer, setIsFinePointer] = useState(false);
 
@@ -108,9 +111,9 @@ export default function HeroSection() {
       >
         {/* Luxury Badge */}
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: -15 }}
+          animate={heroReady ? { opacity: 1, y: 0 } : { opacity: 0, y: -15 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-500/20 border border-gold-400/40 text-gold-300 text-xs uppercase tracking-[0.25em] font-semibold backdrop-blur-md mb-4 sm:mb-6 shadow-sm"
         >
           <Sparkles className="w-3.5 h-3.5 text-gold-400 animate-pulse" />
@@ -123,14 +126,15 @@ export default function HeroSection() {
             text="Discover the Art of Baking"
             highlightWord="Art"
             delay={0.15}
+            trigger={heroReady}
           />
         </h1>
 
         {/* Sub-tagline */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.35 }}
+          initial={{ opacity: 0, y: 15 }}
+          animate={heroReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-cream-200 max-w-2xl font-light leading-relaxed drop-shadow"
         >
           {siteConfig.subTagline}
@@ -138,9 +142,9 @@ export default function HeroSection() {
 
         {/* CTAs with Magnetic Effect */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.45 }}
+          initial={{ opacity: 0, y: 15 }}
+          animate={heroReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
         >
           <Magnetic strength={8}>
@@ -167,7 +171,7 @@ export default function HeroSection() {
         {/* Stat Chips */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={heroReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-8 sm:mt-12 grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 w-full max-w-4xl"
         >

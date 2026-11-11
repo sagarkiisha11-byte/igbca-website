@@ -13,11 +13,19 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scrollbar-gutter: stable;
     font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
     color: #2B1810;
     background-color: #FBF6EE;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  html.intro-locked,
+  body.intro-locked {
+    overflow: hidden !important;
+    height: 100% !important;
+    touch-action: none;
   }
 
   ::selection {

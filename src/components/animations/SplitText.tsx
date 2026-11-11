@@ -8,6 +8,7 @@ interface SplitTextProps {
   className?: string;
   highlightWord?: string;
   delay?: number;
+  trigger?: boolean;
 }
 
 export default function SplitText({
@@ -15,6 +16,7 @@ export default function SplitText({
   className = "",
   highlightWord,
   delay = 0.1,
+  trigger,
 }: SplitTextProps) {
   const words = text.split(" ");
 
@@ -48,8 +50,9 @@ export default function SplitText({
     <motion.span
       variants={containerVariants}
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.15, margin: "0px 0px -10% 0px" }}
+      animate={trigger !== undefined ? (trigger ? "visible" : "hidden") : undefined}
+      whileInView={trigger === undefined ? "visible" : undefined}
+      viewport={trigger === undefined ? { once: true, amount: 0.15, margin: "0px 0px -10% 0px" } : undefined}
       className={`inline-block ${className}`}
     >
       {words.map((word, i) => {

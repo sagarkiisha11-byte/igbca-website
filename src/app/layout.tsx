@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
 import EnquiryModal from "@/components/EnquiryModal";
 import { EnquiryProvider } from "@/context/EnquiryContext";
+import { IntroProvider } from "@/context/IntroContext";
 import { generateOrganizationSchema } from "@/lib/json-ld";
 import Preloader from "@/components/animations/Preloader";
 import SmoothScroll from "@/components/animations/SmoothScroll";
@@ -96,26 +97,28 @@ export default function RootLayout({
   const orgSchema = generateOrganizationSchema();
 
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${inter.variable} intro-locked`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
       </head>
-      <body className="bg-cream-100 text-espresso-900 font-sans min-h-screen flex flex-col selection:bg-gold-500 selection:text-white">
-        <EnquiryProvider>
-          <Preloader />
-          <ScrollProgress />
-          <SmoothScroll>
-            <AnnouncementBar />
-            <Navbar />
-            <main className="flex-grow pb-16 sm:pb-0">{children}</main>
-            <Footer />
-            <FloatingActions />
-            <EnquiryModal />
-          </SmoothScroll>
-        </EnquiryProvider>
+      <body className="bg-cream-100 text-espresso-900 font-sans min-h-screen flex flex-col selection:bg-gold-500 selection:text-white intro-locked">
+        <IntroProvider>
+          <EnquiryProvider>
+            <Preloader />
+            <ScrollProgress />
+            <SmoothScroll>
+              <AnnouncementBar />
+              <Navbar />
+              <main className="flex-grow pb-16 sm:pb-0">{children}</main>
+              <Footer />
+              <FloatingActions />
+              <EnquiryModal />
+            </SmoothScroll>
+          </EnquiryProvider>
+        </IntroProvider>
       </body>
     </html>
   );
