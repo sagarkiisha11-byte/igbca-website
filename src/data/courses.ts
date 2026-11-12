@@ -1,3 +1,5 @@
+import { siteConfig } from "./site";
+
 export interface ModuleItem {
   id: string;
   name: string;
@@ -292,7 +294,7 @@ export const coursesList: Course[] = [
       "Comprehensive baking and pastry arts program covering advanced techniques and industry standards.",
     duration: "5 Months",
     level: "Beginner to Advanced",
-    schedule: "Monday to Thursday • 9:00 AM – 4:00 PM",
+    schedule: `${siteConfig.business.hours.daysLong} • ${siteConfig.business.hours.time}`,
     description:
       "Comprehensive baking and pastry arts program covering advanced techniques and industry standards.",
     overview:
@@ -343,7 +345,7 @@ export const coursesList: Course[] = [
       "Intensive baking course focusing on foundational skills and essential recipes.",
     duration: "3 Months",
     level: "Foundation",
-    schedule: "Monday to Thursday • 9:00 AM – 4:00 PM",
+    schedule: `${siteConfig.business.hours.daysLong} • ${siteConfig.business.hours.time}`,
     description:
       "Intensive baking course focusing on foundational skills and essential recipes.",
     overview:
@@ -383,7 +385,7 @@ export const coursesList: Course[] = [
       "Fast-track baking course for mastering core techniques and popular baked goods.",
     duration: "1 Month (4 Weeks)",
     level: "All Levels",
-    schedule: "Monday to Thursday • 9:00 AM – 4:00 PM",
+    schedule: `${siteConfig.business.hours.daysLong} • ${siteConfig.business.hours.time}`,
     description:
       "Fast-track baking course for mastering core techniques and popular baked goods.",
     overview:

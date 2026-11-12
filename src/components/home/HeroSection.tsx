@@ -212,7 +212,7 @@ export default function HeroSection() {
                 Sector 36D, Chandigarh
               </div>
               <div className="text-[11px] text-cream-300">
-                Mon–Thu • 9:00 AM – 4:00 PM
+                {siteConfig.business.hours.daysShort} • {siteConfig.business.hours.time}
               </div>
             </div>
           </div>

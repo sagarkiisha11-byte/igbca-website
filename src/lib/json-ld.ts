@@ -32,9 +32,9 @@ export function generateOrganizationSchema() {
         openingHoursSpecification: [
           {
             "@type": "OpeningHoursSpecification",
-            dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"],
-            opens: "09:00",
-            closes: "16:00",
+            dayOfWeek: siteConfig.business.hours.daysJsonLd,
+            opens: siteConfig.business.hours.opens,
+            closes: siteConfig.business.hours.closes,
           },
         ],
         sameAs: siteConfig.socials

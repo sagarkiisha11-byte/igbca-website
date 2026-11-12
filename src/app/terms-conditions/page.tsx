@@ -67,7 +67,7 @@ export default function TermsConditionsPage() {
             4. Timings & Attendance
           </h2>
           <p>
-            Core programs run Monday through Thursday, 9:00 AM to 4:00 PM.
+            Core programs run {siteConfig.business.hours.daysThrough}, {siteConfig.business.hours.timeTo}.
             A minimum attendance percentage is required to qualify for graduation
             diplomas and certificates.
           </p>

@@ -130,8 +130,7 @@ export default function FAQPage() {
             Have a Specific Question We Didn&apos;t Answer?
           </h3>
           <p className="mt-2 text-cream-300 text-xs sm:text-sm max-w-lg mx-auto font-light">
-            Our admissions counsellors are available on phone or WhatsApp Monday
-            through Thursday from 9:00 AM to 4:00 PM.
+            Our admissions counsellors are available on phone or WhatsApp {siteConfig.business.hours.daysThrough} from {siteConfig.business.hours.timeTo}.
           </p>
 
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4">

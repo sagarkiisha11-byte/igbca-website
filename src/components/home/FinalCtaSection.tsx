@@ -109,7 +109,7 @@ export default function FinalCtaSection() {
                     Studio Operational Hours
                   </span>
                   <span className="text-cream-300">
-                    Monday to Thursday • 9:00 AM – 4:00 PM
+                    {siteConfig.business.hours.daysLong} • {siteConfig.business.hours.time}
                   </span>
                 </div>
               </div>

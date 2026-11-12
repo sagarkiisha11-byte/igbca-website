@@ -42,7 +42,9 @@ export default function AnnouncementBar() {
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-1 w-full md:w-auto text-[11px] sm:text-xs">
               <div className="flex items-center gap-1.5 text-cream-300">
                 <Clock className="w-3.5 h-3.5 text-gold-400 shrink-0" />
-                <span>Open Mon–Thu • 9:00 AM – 4:00 PM</span>
+                <span>
+                  Open {siteConfig.business.hours.daysShort} • {siteConfig.business.hours.time}
+                </span>
               </div>
 
               <div className="hidden sm:inline-block w-1 h-1 rounded-full bg-gold-500/50" />

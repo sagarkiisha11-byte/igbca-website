@@ -1,3 +1,5 @@
+import { siteConfig } from "./site";
+
 export interface FAQItem {
   question: string;
   answer: string;
@@ -20,7 +22,7 @@ export const faqsList: FAQItem[] = [
   {
     question: "What are the academy's operating days and timings?",
     answer:
-      "Our core studio courses run Monday through Thursday, from 9:00 AM to 4:00 PM. This intensive schedule ensures immersive hands-on bench practice while giving students Friday to Sunday for personal review or travel.",
+      `Our core studio courses run ${siteConfig.business.hours.daysThrough}, from ${siteConfig.business.hours.timeTo}. This intensive schedule ensures immersive hands-on bench practice while giving students weekends for personal review or travel.`,
     category: "General",
   },
   {

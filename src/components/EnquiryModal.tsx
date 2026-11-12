@@ -171,7 +171,7 @@ export default function EnquiryModal() {
                     Enquire About Courses
                   </h3>
                   <p className="text-cream-300 text-xs mt-1">
-                    SCO 218, Sector 36D, Chandigarh • Mon–Thu 9:00 AM – 4:00 PM
+                    {siteConfig.address.street}, {siteConfig.address.sector}, {siteConfig.address.city} • {siteConfig.business.hours.daysShort} {siteConfig.business.hours.time}
                   </p>
                 </div>
 

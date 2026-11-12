@@ -208,7 +208,7 @@ export default function AboutPage() {
             Visit Our Sector 36D Studio
           </h3>
           <p className="mt-3 text-cream-300 text-sm sm:text-base leading-relaxed font-light">
-            We operate Monday through Thursday, 9:00 AM to 4:00 PM. Book a
+            We operate {siteConfig.business.hours.daysThrough}, {siteConfig.business.hours.timeTo}. Book a
             one-on-one counselling session to tour our commercial deck ovens,
             tempering stations, and kitchen workstations.
           </p>

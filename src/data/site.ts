@@ -15,6 +15,18 @@ export interface Instructor {
   focalPoint?: string;
 }
 
+export interface BusinessHours {
+  daysShort: string;
+  daysLong: string;
+  daysThrough: string;
+  daysDash: string;
+  time: string;
+  timeTo: string;
+  opens: string;
+  closes: string;
+  daysJsonLd: string[];
+}
+
 export interface SiteConfig {
   name: string;
   shortName: string;
@@ -36,6 +48,10 @@ export interface SiteConfig {
     email: string;
     timings: string;
   };
+  business: {
+    hours: BusinessHours;
+  };
+  businessHours: BusinessHours;
   socials: SocialLink[];
   googleMapsEmbedUrl: string;
   copyright: string;
@@ -93,7 +109,43 @@ export const siteConfig: SiteConfig = {
     whatsappLink:
       "https://wa.me/918264353936?text=Hi%20IGBCA,%20I%20would%20like%20to%20know%20about%20your%20baking%20courses",
     email: "info@igbca.in",
-    timings: "Monday – Thursday, 9:00 AM – 4:00 PM",
+    timings: "Monday – Friday, 9:00 AM – 4:00 PM",
+  },
+  business: {
+    hours: {
+      daysShort: "Mon–Fri",
+      daysLong: "Monday to Friday",
+      daysThrough: "Monday through Friday",
+      daysDash: "Monday – Friday",
+      time: "9:00 AM – 4:00 PM",
+      timeTo: "9:00 AM to 4:00 PM",
+      opens: "09:00",
+      closes: "16:00",
+      daysJsonLd: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+      ],
+    },
+  },
+  businessHours: {
+    daysShort: "Mon–Fri",
+    daysLong: "Monday to Friday",
+    daysThrough: "Monday through Friday",
+    daysDash: "Monday – Friday",
+    time: "9:00 AM – 4:00 PM",
+    timeTo: "9:00 AM to 4:00 PM",
+    opens: "09:00",
+    closes: "16:00",
+    daysJsonLd: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+    ],
   },
   socials: [
     {

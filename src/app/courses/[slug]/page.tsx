@@ -286,8 +286,7 @@ export default function CourseDetailPage({ params }: CoursePageProps) {
                 Need Studio Assistance?
               </h5>
               <p className="text-espresso-600 font-light">
-                Our Chandigarh studio welcomes prospective students Monday through
-                Thursday, 9:00 AM – 4:00 PM.
+                Our Chandigarh studio welcomes prospective students {siteConfig.business.hours.daysThrough}, {siteConfig.business.hours.time}.
               </p>
               <Link
                 href="/contact"

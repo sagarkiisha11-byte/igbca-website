@@ -210,7 +210,9 @@ export default function Footer() {
 
               <div className="flex items-start gap-2.5 text-cream-400 text-xs pt-1">
                 <Clock className="w-4 h-4 text-gold-400 shrink-0 mt-0.5" />
-                <span>Monday – Thursday • 9:00 AM – 4:00 PM</span>
+                <span>
+                  {siteConfig.business.hours.daysDash} • {siteConfig.business.hours.time}
+                </span>
               </div>
             </div>
           </div>

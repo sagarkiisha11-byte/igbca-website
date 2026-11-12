@@ -45,7 +45,7 @@ export default function UpcomingBatches() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4 text-gold-600" />
-                  <span>Monday to Thursday Schedule</span>
+                  <span>{siteConfig.business.hours.daysLong} Schedule</span>
                 </div>
               </div>
             </div>
