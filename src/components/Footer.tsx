@@ -28,13 +28,13 @@ export default function Footer() {
           {/* Col 1: Brand & Bio (4 cols) */}
           <div className="lg:col-span-4 space-y-5">
             <Link href="/" className="inline-flex items-center gap-3 group">
-              <div className="relative w-12 h-12 rounded-full overflow-hidden border border-gold-400 bg-white p-0.5 shrink-0 group-hover:scale-105 transition-transform">
+              <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-gold-400 bg-white p-0.5 shrink-0 group-hover:scale-105 transition-transform">
                 <Image
                   src={siteConfig.logo}
                   alt="IGBCA Logo"
                   fill
                   sizes="48px"
-                  className="object-contain"
+                  className="object-contain rounded-full"
                 />
               </div>
               <div className="flex flex-col">
@@ -67,26 +67,6 @@ export default function Footer() {
                   className="w-10 h-10 rounded-full bg-espresso-900 border border-gold-500/30 flex items-center justify-center text-cream-200 hover:bg-gold-500 hover:text-espresso-950 hover:border-gold-400 hover:-translate-y-1 transition-all duration-300 shadow-sm"
                 >
                   <Instagram className="w-4 h-4" />
-                </a>
-                <a
-                  href={siteConfig.socials[1].url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="IGBCA on Facebook (Client placeholder)"
-                  title="Official Facebook Page (Client to provide URL)"
-                  className="w-10 h-10 rounded-full bg-espresso-900 border border-gold-500/30 flex items-center justify-center text-cream-200 hover:bg-gold-500 hover:text-espresso-950 hover:border-gold-400 hover:-translate-y-1 transition-all duration-300 shadow-sm"
-                >
-                  <Facebook className="w-4 h-4" />
-                </a>
-                <a
-                  href={siteConfig.socials[2].url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="IGBCA on Pinterest (Client placeholder)"
-                  title="Official Pinterest Page (Client to provide URL)"
-                  className="w-10 h-10 rounded-full bg-espresso-900 border border-gold-500/30 flex items-center justify-center text-cream-200 hover:bg-gold-500 hover:text-espresso-950 hover:border-gold-400 hover:-translate-y-1 transition-all duration-300 shadow-sm"
-                >
-                  <Bookmark className="w-4 h-4" />
                 </a>
                 <a
                   href={siteConfig.contact.whatsappLink}

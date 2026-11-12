@@ -26,6 +26,7 @@
     overflow: hidden !important;
     height: 100% !important;
     touch-action: none;
+    background-color: #FFF6E8 !important;
   }
 
   ::selection {

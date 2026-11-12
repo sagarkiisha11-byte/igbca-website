@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { siteConfig } from "@/data/site";
-import { BookOpen, Sparkles, ChefHat, Layers } from "lucide-react";
+import { BookOpen, Sparkles, ChefHat, Layers, Award, MapPin } from "lucide-react";
 import Counter from "@/components/animations/Counter";
 
 const statIcons = [BookOpen, Sparkles, Layers, ChefHat];
@@ -12,12 +12,35 @@ export default function TrustStrip() {
   return (
     <section
       id="trust-strip"
-      className="bg-espresso-900 border-t border-gold-500/25 relative py-14 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 text-cream-100 overflow-hidden"
+      className="bg-espresso-900 border-t border-gold-500/25 relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 text-cream-100 overflow-hidden"
     >
       {/* Decorative ambient subtle glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-32 bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10 space-y-10 sm:space-y-12">
+        {/* Relocated Trust Points: ONE clean horizontal icon row, not boxes */}
+        <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 md:gap-14 pb-8 sm:pb-10 border-b border-gold-500/20 text-xs sm:text-sm text-cream-200">
+          <div className="flex items-center gap-2.5">
+            <Award className="w-4 h-4 text-gold-400 shrink-0" />
+            <span className="font-medium tracking-wide">100% Practical Bench Stations</span>
+          </div>
+
+          <div className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-gold-500/40" />
+
+          <div className="flex items-center gap-2.5">
+            <Sparkles className="w-4 h-4 text-gold-400 shrink-0" />
+            <span className="font-medium tracking-wide">Open to Age 10+ (Beginners &amp; Pros)</span>
+          </div>
+
+          <div className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-gold-500/40" />
+
+          <div className="flex items-center gap-2.5">
+            <MapPin className="w-4 h-4 text-gold-400 shrink-0" />
+            <span className="font-medium tracking-wide">Sector 36D Studio, Chandigarh</span>
+          </div>
+        </div>
+
+        {/* Existing Stat Counters */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative">
           {siteConfig.stats.map((stat, idx) => {
             const Icon = statIcons[idx % statIcons.length];

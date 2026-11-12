@@ -7,38 +7,37 @@ import { siteConfig } from "@/data/site";
 import { useIntro } from "@/context/IntroContext";
 
 /**
- * Consolidated Intro & Preloader Timings (Total: ~1.6s)
- * - 0.00 – 0.40s: Logo fades in and scales from 0.94 -> 1.0 (easeOut)
- * - 0.15 – 0.60s: Title & Subtitle fade up together (8px rise)
- * - 0.25 – 0.80s: Gold hairline draws left to right
- * - 1.00s: Hold finishes, curtain exit begins (signals heroReady)
- * - 1.00 – 1.60s: Curtain slides up in 0.6s with ease [0.76, 0, 0.24, 1]
+ * Refined Intro & Preloader Timings (Total: ~2.1s)
+ * - Warm, light, welcoming cream-to-caramel background matching classic IGBCA branding
+ * - Perfectly circular crest with 2px gold ring and warm glow
+ * - Fluid typography with zero text overlap
+ * - Smooth 0.6s fade-out exit
  */
 export const INTRO = {
   // Logo
-  logoIn: 0.4,
-  logoScaleFrom: 0.94,
+  logoIn: 0.5,
+  logoScaleFrom: 0.92,
 
   // Text (Title & Subtitle)
-  textDelay: 0.15,
-  textIn: 0.45,
-  textY: 8,
+  textDelay: 0.2,
+  textIn: 0.55,
+  textY: 10,
 
   // Gold Line
-  lineDelay: 0.25,
-  lineDraw: 0.55,
+  lineDelay: 0.35,
+  lineDraw: 0.6,
 
   // Hold & Exit
-  hold: 1000, // ms before exit starts (~1.0s)
-  exit: 0.6, // s
-  exitEase: [0.76, 0, 0.24, 1] as const,
+  hold: 1500, // ms on screen before fade-out begins (~1.5s)
+  exit: 0.6, // s smooth fade-out
+  exitEase: [0.22, 1, 0.36, 1] as const,
 
   // Prefers Reduced Motion
-  reducedHold: 300, // ms
-  reducedDuration: 0.3, // s
+  reducedHold: 300,
+  reducedDuration: 0.3,
 
   // Safety Timeout
-  safetyTimeout: 2000, // ms absolute upper bound (2.0s)
+  safetyTimeout: 2500,
 };
 
 export default function Preloader() {
@@ -56,13 +55,13 @@ export default function Preloader() {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
     setIsReducedMotion(mq.matches);
 
-    // Sequence timer: hold until ~1.0s, then begin exit curtain
+    // Sequence timer: hold until ~1.5s, then begin smooth fade-out
     const holdDuration = mq.matches ? INTRO.reducedHold : INTRO.hold;
     const timer = setTimeout(() => {
       setIntroExiting(true);
     }, holdDuration);
 
-    // Hard emergency timeout: 2.0s absolute upper bound
+    // Hard emergency timeout: 2.5s absolute upper bound
     const emergencyTimer = setTimeout(() => {
       if (!exitCalledRef.current) {
         exitCalledRef.current = true;
@@ -98,70 +97,71 @@ export default function Preloader() {
         <motion.div
           key="igbca-intro-curtain"
           aria-hidden={introExiting}
-          initial={{ y: "0%" }}
-          animate={{ y: "0%" }}
-          exit={
-            isReducedMotion
-              ? { opacity: 0, transition: { duration: INTRO.reducedDuration, ease: "easeOut" } }
-              : {
-                  y: "-100%",
-                  transition: {
-                    duration: INTRO.exit,
-                    ease: INTRO.exitEase,
-                  },
-                }
-          }
-          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-espresso-950 text-cream-50 select-none overflow-hidden will-change-transform"
-          style={{ backgroundColor: "#1A0F0A" }}
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 1 }}
+          exit={{
+            opacity: 0,
+            transition: {
+              duration: isReducedMotion ? INTRO.reducedDuration : INTRO.exit,
+              ease: INTRO.exitEase,
+            },
+          }}
+          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center select-none overflow-hidden will-change-transform"
+          style={{
+            background:
+              "radial-gradient(circle at center, #FFFDF8 0%, #FFF6E8 45%, #F4DCBA 100%)",
+          }}
         >
-          {/* Subtle amber radial glow */}
-          <div className="absolute w-[450px] h-[450px] bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
+          {/* Subtle warm amber ambient glow in the center */}
+          <div className="absolute w-[500px] h-[500px] bg-[#C8963E]/15 rounded-full blur-3xl pointer-events-none" />
 
-          <div className="flex flex-col items-center text-center relative z-10 px-6 max-w-lg">
-            {/* Logo: 0.0 - 0.40s */}
+          <div className="flex flex-col items-center text-center relative z-10 px-6 max-w-md mx-auto w-full">
+            {/* Circular Logo: uncropped crest inside perfect circle with thin gold ring & warm glow */}
             <motion.div
               initial={{ opacity: 0, scale: INTRO.logoScaleFrom }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: INTRO.logoIn, ease: "easeOut" }}
-              className="relative w-20 h-20 sm:w-24 sm:h-24 mb-5 rounded-2xl overflow-hidden border border-gold-400/40 shadow-gold-glow bg-espresso-900/90 p-2"
+              className="relative w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] md:w-[160px] md:h-[160px] mb-6 rounded-full overflow-hidden border-2 border-gold-400 bg-white shadow-[0_0_35px_rgba(200,150,62,0.28)] p-3 shrink-0 flex items-center justify-center"
             >
-              <Image
-                src={siteConfig.logo}
-                alt="IGBCA Crest"
-                fill
-                priority
-                sizes="96px"
-                className="object-contain p-1"
-              />
+              <div className="relative w-full h-full rounded-full overflow-hidden">
+                <Image
+                  src={siteConfig.logo}
+                  alt="IGBCA Crest"
+                  fill
+                  priority
+                  sizes="(max-width: 640px) 120px, 160px"
+                  className="object-contain p-1 rounded-full"
+                />
+              </div>
             </motion.div>
 
-            {/* Title: 0.15 - 0.60s */}
+            {/* Title: Dark espresso brown (#3B2314) with fluid sizing & clean line-height */}
             <motion.h1
               initial={{ opacity: 0, y: INTRO.textY }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: INTRO.textIn, delay: INTRO.textDelay, ease: "easeOut" }}
-              className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-cream-50"
+              className="font-serif text-xl sm:text-2xl md:text-[26px] font-bold tracking-tight text-[#3B2314] leading-snug max-w-sm sm:max-w-md mx-auto"
             >
-              Institute of Global Baking & Culinary Arts
+              Institute of Global Baking &amp; Culinary Arts
             </motion.h1>
 
-            {/* Subtitle: 0.15 - 0.60s */}
+            {/* Subtitle: High-contrast gold-brown (#A8791F), properly spaced below title */}
             <motion.p
               initial={{ opacity: 0, y: INTRO.textY }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: INTRO.textIn, delay: INTRO.textDelay, ease: "easeOut" }}
-              className="text-[10px] sm:text-[11px] uppercase tracking-[0.25em] text-gold-400 font-medium mt-1.5"
+              className="text-[10px] sm:text-[11px] md:text-xs uppercase tracking-[0.22em] text-[#A8791F] font-semibold mt-2.5 max-w-sm mx-auto"
             >
-              BAKING & CULINARY ARTS ACADEMY • CHANDIGARH
+              BAKING &amp; CULINARY ARTS ACADEMY • CHANDIGARH
             </motion.p>
 
-            {/* Animated drawing gold hairline: 0.25 - 0.80s */}
-            <div className="relative w-40 sm:w-56 h-[1.5px] bg-gold-500/20 mt-5 overflow-hidden rounded-full">
+            {/* Animated drawing gold hairline */}
+            <div className="relative w-36 sm:w-48 h-[1.5px] bg-[#C8963E]/25 mt-4 overflow-hidden rounded-full">
               <motion.div
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ duration: INTRO.lineDraw, delay: INTRO.lineDelay, ease: "easeInOut" }}
-                className="w-full h-full bg-gradient-to-r from-transparent via-gold-400 to-transparent origin-left"
+                className="w-full h-full bg-gradient-to-r from-transparent via-[#C8963E] to-transparent origin-left"
               />
             </div>
           </div>

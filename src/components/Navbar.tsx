@@ -74,13 +74,13 @@ export default function Navbar() {
             className="flex items-center gap-3 group outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2 focus-visible:ring-offset-espresso-950 rounded-lg p-1"
             aria-label="IGBCA Home"
           >
-            <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden border border-gold-400/40 bg-white p-0.5 shadow-md shrink-0 group-hover:scale-105 transition-transform duration-300">
+            <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-gold-400 bg-white p-0.5 shadow-md shrink-0 group-hover:scale-105 transition-transform duration-300">
               <Image
                 src={siteConfig.logo}
                 alt="IGBCA Logo"
                 fill
                 sizes="48px"
-                className="object-contain"
+                className="object-contain rounded-full"
                 priority
               />
             </div>
@@ -246,19 +246,11 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Right Action CTAs */}
-          <div className="hidden lg:flex items-center gap-3">
-            <a
-              href={siteConfig.contact.phoneTel}
-              className="text-xs text-cream-200 hover:text-gold-300 flex items-center gap-1.5 transition-colors px-2 py-1"
-            >
-              <Phone className="w-3.5 h-3.5 text-gold-400" />
-              <span>{siteConfig.contact.phone}</span>
-            </a>
-
+          {/* Right Action CTA (Single Enquire Button) */}
+          <div className="hidden lg:flex items-center">
             <button
               onClick={() => openEnquiryModal()}
-              className="btn-gold-shine px-5 py-2.5 rounded-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-espresso-950 font-bold text-xs uppercase tracking-wider shadow-gold-glow hover:shadow-xl transition-all"
+              className="btn-gold-shine px-6 py-2.5 rounded-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-espresso-950 font-bold text-xs uppercase tracking-wider shadow-gold-glow hover:shadow-xl transition-all"
             >
               Enquire Now
             </button>

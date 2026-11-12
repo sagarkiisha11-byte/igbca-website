@@ -54,6 +54,7 @@ export interface SiteConfig {
     hours: BusinessHours;
   };
   businessHours: BusinessHours;
+  timings: string;
   socials: SocialLink[];
   googleMapsEmbedUrl: string;
   copyright: string;
@@ -153,6 +154,7 @@ export const siteConfig: SiteConfig = {
       "Friday",
     ],
   },
+  timings: "Monday – Friday, 9:30 AM – 6:30 PM",
   socials: [
     {
       name: "Instagram",
