@@ -13,7 +13,7 @@ export default function AboutPreview() {
   const [activeTab, setActiveTab] = useState<"mission" | "vision">("mission");
 
   return (
-    <section className="py-20 md:py-28 lg:py-32 bg-cream-100 text-espresso-900 relative overflow-hidden">
+    <section className="py-20 md:py-28 lg:py-32 bg-[#F6E7D0] text-[#3B2314] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left: Overlapping Image Composition with Parallax (5 cols) */}
@@ -25,13 +25,13 @@ export default function AboutPreview() {
             className="lg:col-span-5 relative"
           >
             {/* Primary Large Image with Clip-Path Reveal & Slow Parallax */}
-            <div className="relative w-full h-[400px] sm:h-[480px] rounded-2xl overflow-hidden shadow-luxury border-2 border-gold-500/20">
+            <div className="relative w-full h-[400px] sm:h-[480px] rounded-2xl overflow-hidden shadow-luxury border-2 border-[#E9C9A0]/60">
               <ParallaxImage
                 src="https://igbca.in/wp-content/uploads/2024/07/IMG-20230216-WA0005.jpg"
                 alt="IGBCA Baking Studio Practicals"
                 className="w-full h-full"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-espresso-950/60 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-espresso-950/40 via-transparent to-transparent pointer-events-none" />
             </div>
 
             {/* Overlapping Secondary Image */}
@@ -40,7 +40,7 @@ export default function AboutPreview() {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.25, duration: 0.6 }}
-              className="absolute -bottom-8 -right-4 sm:-right-8 w-44 sm:w-56 h-48 sm:h-60 rounded-2xl overflow-hidden border-4 border-cream-100 shadow-2xl z-10 hidden sm:block group"
+              className="absolute -bottom-8 -right-4 sm:-right-8 w-44 sm:w-56 h-48 sm:h-60 rounded-2xl overflow-hidden border-4 border-[#F6E7D0] shadow-2xl z-10 hidden sm:block group"
             >
               <Image
                 src="https://igbca.in/wp-content/uploads/2024/05/12.jpg"
@@ -50,25 +50,12 @@ export default function AboutPreview() {
                 className="object-cover group-hover:scale-106 transition-transform duration-700 ease-out"
                 style={{ objectPosition: "50% 18%" }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-espresso-950/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-espresso-950/70 via-transparent to-transparent" />
               <div className="absolute bottom-2.5 left-2.5 right-2.5 text-cream-100 text-[11px] font-medium leading-tight">
                 Ranjana Sukhija
                 <span className="block text-[9px] text-gold-400">Founder & Master Patissier</span>
               </div>
             </motion.div>
-
-            {/* Gold Floating Experience Chip */}
-            <div className="absolute top-6 -left-3 sm:-left-6 bg-espresso-950 text-cream-100 px-4 py-2.5 rounded-xl border border-gold-400/40 shadow-xl z-20 flex items-center gap-2.5">
-              <Sparkles className="w-4 h-4 text-gold-400" />
-              <div>
-                <div className="font-serif text-sm font-bold text-gold-400">
-                  Sector 36D
-                </div>
-                <div className="text-[10px] text-cream-300">
-                  Chandigarh Studio
-                </div>
-              </div>
-            </div>
           </motion.div>
 
           {/* Right: Editorial Narrative & Tabs (7 cols) */}
@@ -96,14 +83,14 @@ export default function AboutPreview() {
             </p>
 
             {/* Mission / Vision Tabs */}
-            <div className="bg-white/80 rounded-2xl p-5 border border-gold-500/20 shadow-sm space-y-4">
-              <div className="flex items-center gap-2 border-b border-cream-200 pb-2">
+            <div className="bg-white/95 rounded-2xl p-5 border border-[#E9C9A0]/60 shadow-sm space-y-4">
+              <div className="flex items-center gap-2 border-b border-[#E9C9A0]/40 pb-2">
                 <button
                   onClick={() => setActiveTab("mission")}
                   className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
                     activeTab === "mission"
-                      ? "bg-espresso-950 text-gold-400 shadow-sm"
-                      : "text-espresso-800 hover:text-gold-600 hover:bg-cream-100"
+                      ? "bg-[#3B2314] text-[#C9A24A] shadow-sm"
+                      : "text-[#3B2314] hover:text-[#A8791F] hover:bg-[#F6E7D0]/50"
                   }`}
                 >
                   <Target className="w-4 h-4" />
@@ -113,8 +100,8 @@ export default function AboutPreview() {
                   onClick={() => setActiveTab("vision")}
                   className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
                     activeTab === "vision"
-                      ? "bg-espresso-950 text-gold-400 shadow-sm"
-                      : "text-espresso-800 hover:text-gold-600 hover:bg-cream-100"
+                      ? "bg-[#3B2314] text-[#C9A24A] shadow-sm"
+                      : "text-[#3B2314] hover:text-[#A8791F] hover:bg-[#F6E7D0]/50"
                   }`}
                 >
                   <Compass className="w-4 h-4" />

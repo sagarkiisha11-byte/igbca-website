@@ -71,7 +71,7 @@ export default function ShortWorkshopsSection() {
   };
 
   return (
-    <section className="py-20 md:py-28 lg:py-32 bg-cream-50 text-espresso-950 overflow-hidden">
+    <section className="py-20 md:py-28 lg:py-32 bg-[#F6E7D0] text-[#3B2314] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
@@ -95,14 +95,14 @@ export default function ShortWorkshopsSection() {
               <button
                 onClick={() => scroll("left")}
                 aria-label="Scroll workshops left"
-                className="w-10 h-10 rounded-full border border-gold-500/40 bg-white hover:bg-gold-500 hover:text-white flex items-center justify-center transition-colors shadow-sm"
+                className="w-10 h-10 rounded-full border border-[#E9C9A0] bg-white text-[#3B2314] hover:bg-gold-500 hover:text-white flex items-center justify-center transition-colors shadow-sm"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
               <button
                 onClick={() => scroll("right")}
                 aria-label="Scroll workshops right"
-                className="w-10 h-10 rounded-full border border-gold-500/40 bg-white hover:bg-gold-500 hover:text-white flex items-center justify-center transition-colors shadow-sm"
+                className="w-10 h-10 rounded-full border border-[#E9C9A0] bg-white text-[#3B2314] hover:bg-gold-500 hover:text-white flex items-center justify-center transition-colors shadow-sm"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
@@ -110,7 +110,7 @@ export default function ShortWorkshopsSection() {
 
             <Link
               href="/courses/short-term-courses"
-              className="text-xs uppercase tracking-wider font-semibold text-gold-700 hover:text-gold-900 inline-flex items-center gap-1.5 underline underline-offset-4"
+              className="text-xs uppercase tracking-wider font-semibold text-[#A8791F] hover:text-[#3B2314] inline-flex items-center gap-1.5 underline underline-offset-4"
             >
               <span>View All 17 Modules</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -126,8 +126,8 @@ export default function ShortWorkshopsSection() {
               onClick={() => setActiveFilter(cat)}
               className={`px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
                 activeFilter === cat
-                  ? "bg-espresso-950 text-gold-300 shadow-sm"
-                  : "bg-white text-espresso-800 border border-gold-500/20 hover:border-gold-500/40"
+                  ? "bg-[#3B2314] text-[#C9A24A] shadow-sm"
+                  : "bg-white text-[#3B2314] border border-[#E9C9A0]/60 hover:border-gold-400"
               }`}
             >
               {cat}
@@ -149,7 +149,7 @@ export default function ShortWorkshopsSection() {
             >
               <TiltCard
                 maxTilt={5}
-                className="bg-white rounded-2xl overflow-hidden border border-gold-500/20 shadow-sm hover:shadow-luxury hover:border-gold-500/40 transition-all duration-300 flex flex-col h-full group"
+                className="bg-white rounded-2xl overflow-hidden border border-[#E9C9A0]/60 shadow-sm hover:shadow-luxury hover:border-gold-400/60 transition-all duration-300 flex flex-col h-full group"
               >
                 {/* Workshop Image */}
                 <div className="relative h-44 w-full overflow-hidden bg-cream-200">
@@ -162,7 +162,7 @@ export default function ShortWorkshopsSection() {
                       className="object-cover group-hover:scale-106 transition-transform duration-700 ease-out"
                     />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-cream-200 text-espresso-700 text-xs font-serif">
+                    <div className="w-full h-full flex items-center justify-center bg-cream-200 text-[#5A3A25] text-xs font-serif">
                       IGBCA Studio Module
                     </div>
                   )}
@@ -184,22 +184,22 @@ export default function ShortWorkshopsSection() {
                 {/* Workshop Content */}
                 <div className="p-5 flex flex-col flex-grow">
                   <div className="flex items-baseline justify-between gap-2">
-                    <h3 className="font-serif text-lg font-bold text-espresso-950 group-hover:text-gold-700 transition-colors">
+                    <h3 className="font-serif text-lg font-bold text-[#3B2314] group-hover:text-[#A8791F] transition-colors">
                       {workshop.name}
                     </h3>
                   </div>
 
-                  <p className="mt-2 text-xs text-espresso-700 leading-relaxed line-clamp-2 flex-grow">
+                  <p className="mt-2 text-xs text-[#5A3A25] leading-relaxed line-clamp-1 flex-grow">
                     {workshop.description}
                   </p>
 
                   {/* Price & CTA strip */}
-                  <div className="mt-5 pt-3 border-t border-cream-200 flex items-center justify-between">
+                  <div className="mt-5 pt-3 border-t border-[#E9C9A0]/40 flex items-center justify-between">
                     <div>
-                      <span className="block text-[10px] uppercase tracking-wider text-espresso-500 font-medium">
+                      <span className="block text-[10px] uppercase tracking-wider text-[#5A3A25]/70 font-medium">
                         Course Fee
                       </span>
-                      <span className="font-serif text-lg font-bold text-gold-600">
+                      <span className="font-serif text-lg font-bold text-[#A8791F]">
                         {workshop.price}
                       </span>
                     </div>
@@ -208,7 +208,7 @@ export default function ShortWorkshopsSection() {
                       onClick={() =>
                         openEnquiryModal(`Short Course - ${workshop.name}`)
                       }
-                      className="btn-gold-shine px-3 py-1.5 rounded-lg bg-espresso-950 hover:bg-gold-500 text-gold-400 hover:text-espresso-950 text-xs font-semibold flex items-center gap-1 transition-all"
+                      className="btn-gold-shine px-3 py-1.5 rounded-lg bg-[#3B2314] hover:bg-gold-500 text-gold-300 hover:text-[#3B2314] text-xs font-semibold flex items-center gap-1 transition-all"
                     >
                       <span>Enquire</span>
                       <Send className="w-3 h-3" />

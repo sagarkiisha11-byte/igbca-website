@@ -3,10 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --color-cream: #FBF6EE;
-  --color-espresso: #2B1810;
-  --color-chocolate: #4A2C1A;
-  --color-gold: #C8963E;
+  --cream: #FFF8EF;
+  --sand: #F6E7D0;
+  --caramel: #E9C9A0;
+  --gold: #C9A24A;
+  --gold-deep: #A8791F;
+  --ink: #3B2314;
+  --color-cream: #FFF8EF;
+  --color-espresso: #3B2314;
+  --color-chocolate: #5A3A25;
+  --color-gold: #C9A24A;
   --color-blush: #F3D9CF;
 }
 
@@ -15,8 +21,8 @@
     scroll-behavior: smooth;
     scrollbar-gutter: stable;
     font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
-    color: #2B1810;
-    background-color: #FBF6EE;
+    color: var(--ink);
+    background-color: var(--cream);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -26,7 +32,7 @@
     overflow: hidden !important;
     height: 100% !important;
     touch-action: none;
-    background-color: #FFF6E8 !important;
+    background-color: #FFF8EF !important;
   }
 
   ::selection {

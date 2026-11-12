@@ -57,7 +57,7 @@ export default function FloatingActions() {
               transition={{ duration: 0.3 }}
               onClick={scrollToTop}
               aria-label="Back to top of page"
-              className="relative w-12 h-12 rounded-full bg-espresso-950/95 text-gold-300 border border-gold-500/30 flex items-center justify-center shadow-luxury hover:bg-gold-500 hover:text-espresso-950 transition-all duration-300 group"
+              className="relative w-12 h-12 rounded-full bg-white/95 text-[#3B2314] border border-[#E9C9A0] flex items-center justify-center shadow-luxury hover:bg-[#F6E7D0] hover:text-[#A8791F] transition-all duration-300 group"
             >
               {/* SVG Circular Progress Track */}
               <svg className="absolute inset-0 w-full h-full -rotate-90 pointer-events-none p-1">
@@ -124,14 +124,14 @@ export default function FloatingActions() {
       </div>
 
       {/* Mobile Sticky Bottom Action Bar (360px - 640px) */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 sm:hidden bg-espresso-950/98 backdrop-blur-lg border-t border-gold-500/30 px-3 py-2.5 shadow-2xl safe-area-bottom">
+      <div className="fixed bottom-0 left-0 right-0 z-40 sm:hidden bg-white/95 backdrop-blur-lg border-t border-[#E9C9A0]/70 px-3 py-2.5 shadow-2xl safe-area-bottom">
         <div className="grid grid-cols-3 gap-2">
           {/* 1: Call */}
           <a
             href={siteConfig.contact.phoneTel}
-            className="flex flex-col items-center justify-center py-1.5 px-2 rounded-xl bg-espresso-900 border border-gold-500/20 text-cream-200 active:bg-gold-500/20 transition-colors"
+            className="flex flex-col items-center justify-center py-1.5 px-2 rounded-xl bg-[#FFF8EF] border border-[#E9C9A0]/60 text-[#3B2314] active:bg-[#F6E7D0] transition-colors"
           >
-            <Phone className="w-4 h-4 text-gold-400 mb-0.5" />
+            <Phone className="w-4 h-4 text-[#A8791F] mb-0.5" />
             <span className="text-[11px] font-medium">Call Us</span>
           </a>
 
@@ -140,16 +140,16 @@ export default function FloatingActions() {
             href={siteConfig.contact.whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center justify-center py-1.5 px-2 rounded-xl bg-emerald-950/70 border border-emerald-500/30 text-emerald-200 active:bg-emerald-600/30 transition-colors"
+            className="flex flex-col items-center justify-center py-1.5 px-2 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-800 active:bg-emerald-100 transition-colors"
           >
-            <MessageCircle className="w-4 h-4 text-emerald-400 mb-0.5" />
+            <MessageCircle className="w-4 h-4 text-emerald-600 mb-0.5" />
             <span className="text-[11px] font-medium">WhatsApp</span>
           </a>
 
           {/* 3: Enquire */}
           <button
             onClick={() => openEnquiryModal()}
-            className="btn-gold-shine flex flex-col items-center justify-center py-1.5 px-2 rounded-xl bg-gradient-to-r from-gold-500 to-gold-400 text-espresso-950 font-bold active:scale-95 transition-transform shadow-gold-glow"
+            className="btn-gold-shine flex flex-col items-center justify-center py-1.5 px-2 rounded-xl bg-gradient-to-r from-gold-500 to-gold-400 text-[#3B2314] font-bold active:scale-95 transition-transform shadow-gold-glow"
           >
             <Send className="w-4 h-4 mb-0.5" />
             <span className="text-[11px] font-bold uppercase tracking-wider">

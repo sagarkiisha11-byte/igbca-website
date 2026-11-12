@@ -39,7 +39,7 @@ export default function TestimonialsSection() {
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={() => setIsPaused(true)}
       onTouchEnd={() => setIsPaused(false)}
-      className="py-20 md:py-28 lg:py-32 bg-cream-50 text-espresso-950 overflow-hidden"
+      className="py-20 md:py-28 lg:py-32 bg-[#FFF8EF] text-[#3B2314] overflow-hidden"
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
@@ -75,7 +75,7 @@ export default function TestimonialsSection() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -40 }}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="bg-white rounded-3xl p-8 sm:p-12 md:p-14 border border-gold-500/25 shadow-luxury relative overflow-hidden"
+              className="bg-white rounded-3xl p-8 sm:p-12 md:p-14 border border-[#E9C9A0]/60 shadow-luxury relative overflow-hidden"
             >
               {/* Giant decorative watermark quote */}
               <Quote className="w-24 h-24 text-gold-500/10 absolute -bottom-4 right-6 pointer-events-none" />
@@ -108,7 +108,7 @@ export default function TestimonialsSection() {
               {/* Author & Credential */}
               <div className="flex items-center justify-between pt-6 border-t border-cream-200">
                 <div className="flex items-center gap-3.5">
-                  <div className="w-12 h-12 rounded-full bg-espresso-950 text-gold-400 font-bold text-sm flex items-center justify-center shrink-0 border border-gold-400/40 shadow-sm">
+                  <div className="w-12 h-12 rounded-full bg-[#3B2314] text-[#C9A24A] font-bold text-sm flex items-center justify-center shrink-0 border border-gold-400/40 shadow-sm">
                     {currentItem.avatarText}
                   </div>
                   <div>

@@ -78,7 +78,7 @@ export default function GalleryPreview() {
   };
 
   return (
-    <section className="py-20 md:py-28 lg:py-32 bg-cream-50 text-espresso-950 overflow-hidden">
+    <section className="py-20 md:py-28 lg:py-32 bg-[#F6E7D0] text-[#3B2314] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
@@ -97,7 +97,7 @@ export default function GalleryPreview() {
 
           <Link
             href="/gallery"
-            className="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-gold-700 hover:text-gold-900 group shrink-0"
+            className="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-[#A8791F] hover:text-[#3B2314] group shrink-0"
           >
             <span>Explore Complete Gallery</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

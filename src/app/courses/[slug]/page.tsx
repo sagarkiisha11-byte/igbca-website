@@ -80,7 +80,7 @@ export default function CourseDetailPage({ params }: CoursePageProps) {
       />
 
       {/* Cinematic Hero */}
-      <section className="relative min-h-[460px] lg:min-h-[520px] bg-espresso-950 text-cream-100 flex items-center overflow-hidden border-b border-gold-500/20">
+      <section className="relative min-h-[460px] lg:min-h-[520px] bg-[#3B2314] text-cream-100 flex items-center overflow-hidden border-b border-[#E9C9A0]/30">
         <div className="absolute inset-0 z-0">
           <Image
             src={course.heroImage}
@@ -90,8 +90,8 @@ export default function CourseDetailPage({ params }: CoursePageProps) {
             sizes="100vw"
             className="object-cover opacity-35"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-espresso-950 via-espresso-950/70 to-espresso-950/40" />
-          <div className="absolute inset-0 bg-gradient-to-r from-espresso-950/90 via-espresso-950/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#3B2314] via-[#3B2314]/70 to-[#3B2314]/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#3B2314]/90 via-[#3B2314]/60 to-transparent" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 w-full">
@@ -122,15 +122,15 @@ export default function CourseDetailPage({ params }: CoursePageProps) {
 
             {/* Quick Chips */}
             <div className="mt-8 flex flex-wrap gap-3 text-xs">
-              <div className="flex items-center gap-2 bg-espresso-900/80 border border-gold-500/30 px-3.5 py-1.5 rounded-full text-cream-200">
+              <div className="flex items-center gap-2 bg-black/40 backdrop-blur-md border border-[#E9C9A0]/40 px-3.5 py-1.5 rounded-full text-cream-100">
                 <Clock className="w-4 h-4 text-gold-400" />
                 <span>{course.duration}</span>
               </div>
-              <div className="flex items-center gap-2 bg-espresso-900/80 border border-gold-500/30 px-3.5 py-1.5 rounded-full text-cream-200">
+              <div className="flex items-center gap-2 bg-black/40 backdrop-blur-md border border-[#E9C9A0]/40 px-3.5 py-1.5 rounded-full text-cream-100">
                 <BookOpen className="w-4 h-4 text-gold-400" />
                 <span>{course.modulesCount} In-Depth Modules</span>
               </div>
-              <div className="flex items-center gap-2 bg-espresso-900/80 border border-gold-500/30 px-3.5 py-1.5 rounded-full text-cream-200">
+              <div className="flex items-center gap-2 bg-black/40 backdrop-blur-md border border-[#E9C9A0]/40 px-3.5 py-1.5 rounded-full text-cream-100">
                 <Calendar className="w-4 h-4 text-gold-400" />
                 <span>{course.schedule}</span>
               </div>
@@ -217,35 +217,35 @@ export default function CourseDetailPage({ params }: CoursePageProps) {
 
           {/* Sticky Sidebar on Desktop (4 cols) */}
           <div className="lg:col-span-4 sticky top-24 space-y-6">
-            <div className="bg-espresso-950 text-cream-100 rounded-3xl p-6 sm:p-7 border border-gold-500/30 shadow-luxury space-y-6">
+            <div className="bg-white text-[#3B2314] rounded-3xl p-6 sm:p-7 border border-[#E9C9A0]/60 shadow-luxury space-y-6">
               <div>
-                <span className="text-[10px] uppercase tracking-widest text-gold-400 font-semibold block">
+                <span className="text-[10px] uppercase tracking-widest text-[#A8791F] font-semibold block">
                   Course Investment & Batch
                 </span>
-                <div className="font-serif text-2xl font-bold text-cream-50 mt-1">
+                <div className="font-serif text-2xl font-bold text-[#3B2314] mt-1">
                   {course.feeInfo}
                 </div>
-                <p className="text-cream-300 text-xs mt-1">
+                <p className="text-[#5A3A25] text-xs mt-1">
                   All commercial ingredients, chef jacket, and recipes included.
                 </p>
               </div>
 
-              <div className="space-y-3 text-xs text-cream-200 pt-4 border-t border-gold-500/20">
-                <div className="flex justify-between py-1 border-b border-white/5">
-                  <span className="text-cream-400">Duration:</span>
-                  <span className="font-semibold">{course.duration}</span>
+              <div className="space-y-3 text-xs text-[#5A3A25] pt-4 border-t border-[#E9C9A0]/40">
+                <div className="flex justify-between py-1 border-b border-[#E9C9A0]/20">
+                  <span className="text-[#5A3A25]/80">Duration:</span>
+                  <span className="font-semibold text-[#3B2314]">{course.duration}</span>
                 </div>
-                <div className="flex justify-between py-1 border-b border-white/5">
-                  <span className="text-cream-400">Timings:</span>
-                  <span className="font-semibold">{course.schedule}</span>
+                <div className="flex justify-between py-1 border-b border-[#E9C9A0]/20">
+                  <span className="text-[#5A3A25]/80">Timings:</span>
+                  <span className="font-semibold text-[#3B2314]">{course.schedule}</span>
                 </div>
-                <div className="flex justify-between py-1 border-b border-white/5">
-                  <span className="text-cream-400">Class Type:</span>
-                  <span className="font-semibold">100% Practical Bench</span>
+                <div className="flex justify-between py-1 border-b border-[#E9C9A0]/20">
+                  <span className="text-[#5A3A25]/80">Class Type:</span>
+                  <span className="font-semibold text-[#3B2314]">100% Practical Bench</span>
                 </div>
                 <div className="flex justify-between py-1">
-                  <span className="text-cream-400">Studio Location:</span>
-                  <span className="font-semibold">Sector 36D, Chandigarh</span>
+                  <span className="text-[#5A3A25]/80">Studio Location:</span>
+                  <span className="font-semibold text-[#3B2314]">Sector 36D, Chandigarh</span>
                 </div>
               </div>
 
@@ -257,24 +257,24 @@ export default function CourseDetailPage({ params }: CoursePageProps) {
                   href={siteConfig.contact.whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-950/70 border border-emerald-500/40 text-emerald-300 hover:text-emerald-200 text-xs font-semibold uppercase tracking-wider transition-colors"
+                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold uppercase tracking-wider transition-colors shadow-sm"
                 >
-                  <MessageCircle className="w-4 h-4 text-emerald-400" />
+                  <MessageCircle className="w-4 h-4" />
                   <span>WhatsApp Admissions</span>
                 </a>
 
                 <a
                   href={siteConfig.contact.phoneTel}
-                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-gold-500/30 text-cream-300 hover:text-gold-300 text-xs font-medium transition-colors"
+                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-[#E9C9A0] text-[#3B2314] hover:bg-[#F6E7D0]/50 text-xs font-medium transition-colors"
                 >
-                  <Phone className="w-3.5 h-3.5 text-gold-400" />
+                  <Phone className="w-3.5 h-3.5 text-[#A8791F]" />
                   <span>Call: {siteConfig.contact.phone}</span>
                 </a>
               </div>
 
               <div className="text-center pt-2">
-                <p className="text-[11px] text-cream-400 flex items-center justify-center gap-1">
-                  <ShieldCheck className="w-3.5 h-3.5 text-gold-400" />
+                <p className="text-[11px] text-[#5A3A25]/70 flex items-center justify-center gap-1">
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#A8791F]" />
                   <span>Limited seats to ensure individual attention</span>
                 </p>
               </div>
@@ -319,7 +319,7 @@ export default function CourseDetailPage({ params }: CoursePageProps) {
                     sizes="350px"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute top-2.5 left-2.5 bg-espresso-950/90 text-gold-300 px-2.5 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider">
+                  <div className="absolute top-2.5 left-2.5 bg-white/95 text-[#A8791F] border border-[#E9C9A0]/60 shadow-sm px-2.5 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider">
                     {other.badge}
                   </div>
                 </div>

@@ -116,12 +116,12 @@ export default function Preloader() {
           <div className="absolute w-[500px] h-[500px] bg-[#C8963E]/15 rounded-full blur-3xl pointer-events-none" />
 
           <div className="flex flex-col items-center text-center relative z-10 px-6 max-w-md mx-auto w-full">
-            {/* Circular Logo: uncropped crest inside perfect circle with thin gold ring & warm glow */}
+            {/* Circular Logo: fills ~90% of circle with thin gold ring & warm glow */}
             <motion.div
               initial={{ opacity: 0, scale: INTRO.logoScaleFrom }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: INTRO.logoIn, ease: "easeOut" }}
-              className="relative w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] md:w-[160px] md:h-[160px] mb-6 rounded-full overflow-hidden border-2 border-gold-400 bg-white shadow-[0_0_35px_rgba(200,150,62,0.28)] p-3 shrink-0 flex items-center justify-center"
+              className="relative w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] md:w-[160px] md:h-[160px] mb-6 rounded-full overflow-hidden border-2 border-gold-400 bg-white shadow-[0_0_35px_rgba(200,150,62,0.28)] p-1 sm:p-1.5 shrink-0 flex items-center justify-center"
             >
               <div className="relative w-full h-full rounded-full overflow-hidden">
                 <Image
@@ -130,7 +130,7 @@ export default function Preloader() {
                   fill
                   priority
                   sizes="(max-width: 640px) 120px, 160px"
-                  className="object-contain p-1 rounded-full"
+                  className="object-contain rounded-full"
                 />
               </div>
             </motion.div>
@@ -145,15 +145,16 @@ export default function Preloader() {
               Institute of Global Baking &amp; Culinary Arts
             </motion.h1>
 
-            {/* Subtitle: High-contrast gold-brown (#A8791F), properly spaced below title */}
-            <motion.p
+            {/* Subtitle: High-contrast gold-brown (#A8791F), intentional 2 lines on mobile without dangling bullet */}
+            <motion.div
               initial={{ opacity: 0, y: INTRO.textY }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: INTRO.textIn, delay: INTRO.textDelay, ease: "easeOut" }}
-              className="text-[10px] sm:text-[11px] md:text-xs uppercase tracking-[0.22em] text-[#A8791F] font-semibold mt-2.5 max-w-sm mx-auto"
+              className="text-[10px] sm:text-[11px] md:text-xs uppercase tracking-[0.22em] text-[#A8791F] font-semibold mt-2.5 max-w-sm mx-auto text-center [text-wrap:balance]"
             >
-              BAKING &amp; CULINARY ARTS ACADEMY • CHANDIGARH
-            </motion.p>
+              <span>BAKING &amp; CULINARY ARTS ACADEMY</span>
+              <span className="block sm:inline sm:before:content-['\00a0•\00a0']">CHANDIGARH</span>
+            </motion.div>
 
             {/* Animated drawing gold hairline */}
             <div className="relative w-36 sm:w-48 h-[1.5px] bg-[#C8963E]/25 mt-4 overflow-hidden rounded-full">

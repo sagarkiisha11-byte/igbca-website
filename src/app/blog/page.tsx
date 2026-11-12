@@ -16,19 +16,19 @@ export default function BlogListingPage() {
   return (
     <div className="bg-cream-100 text-espresso-950 min-h-screen">
       {/* Header */}
-      <section className="bg-espresso-950 text-cream-100 py-16 sm:py-20 relative overflow-hidden border-b border-gold-500/20">
+      <section className="bg-[#F6E7D0] text-[#3B2314] py-16 sm:py-20 relative overflow-hidden border-b border-[#E9C9A0]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <Breadcrumb items={[{ name: "Stories & Journal", url: "/blog" }]} />
 
           <div className="max-w-3xl mt-6">
-            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold mb-3">
+            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-[#A8791F] font-semibold mb-3">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Pastry Gazette</span>
             </div>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-cream-50 tracking-tight leading-tight">
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#3B2314] tracking-tight leading-tight">
               Stories From Our Kitchen
             </h1>
-            <p className="mt-4 text-cream-300 text-base sm:text-lg font-light leading-relaxed">
+            <p className="mt-4 text-[#5A3A25] text-base sm:text-lg font-light leading-relaxed">
               Explore technical pastry guides, bakery business insights, and
               pro-tips from Master Patissiers Ranjana Sukhija and Siddhant Khosla.
             </p>
@@ -52,7 +52,7 @@ export default function BlogListingPage() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute top-3 left-3 bg-espresso-950/90 text-gold-300 px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider backdrop-blur-md border border-gold-400/30">
+                <div className="absolute top-3 left-3 bg-white/95 text-[#A8791F] px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider backdrop-blur-md border border-[#E9C9A0]/60 shadow-sm">
                   {post.category}
                 </div>
               </div>

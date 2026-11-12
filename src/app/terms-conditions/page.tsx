@@ -12,13 +12,13 @@ export const metadata: Metadata = {
 export default function TermsConditionsPage() {
   return (
     <div className="bg-cream-100 text-espresso-950 min-h-screen">
-      <section className="bg-espresso-950 text-cream-100 py-16 sm:py-20 border-b border-gold-500/20">
+      <section className="bg-[#F6E7D0] text-[#3B2314] py-16 sm:py-20 border-b border-[#E9C9A0]/60">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumb items={[{ name: "Terms & Conditions", url: "/terms-conditions" }]} />
-          <h1 className="font-serif text-3xl sm:text-5xl font-bold text-cream-50 mt-6">
+          <h1 className="font-serif text-3xl sm:text-5xl font-bold text-[#3B2314] mt-6">
             Terms & Conditions
           </h1>
-          <p className="mt-2 text-cream-300 text-xs sm:text-sm">
+          <p className="mt-2 text-[#5A3A25] text-xs sm:text-sm">
             Last Updated: 2026 • Institute of Global Baking & Culinary Arts
           </p>
         </div>

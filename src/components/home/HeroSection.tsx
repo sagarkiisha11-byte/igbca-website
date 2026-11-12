@@ -89,10 +89,10 @@ export default function HeroSection() {
           </div>
         ))}
 
-        {/* Soft, warm, appetizing gradient overlays (not heavy black) */}
-        <div className="absolute inset-0 bg-gradient-to-t from-espresso-950/80 via-espresso-950/35 to-espresso-950/65 pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-r from-espresso-950/65 via-transparent to-espresso-950/65 pointer-events-none" />
-        <div className="absolute inset-0 bg-amber-950/15 mix-blend-multiply pointer-events-none" />
+        {/* Soft, warm, appetizing gradient overlays (25-35% opacity, bright and appetizing) */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#2B1810]/70 via-[#2B1810]/25 to-[#2B1810]/40 pointer-events-none" />
+        <div className="absolute inset-0 bg-[#2B1810]/15 pointer-events-none" />
+        <div className="absolute inset-0 bg-amber-900/10 mix-blend-multiply pointer-events-none" />
       </div>
 
       {/* Main Hero Content: Clean, Uncluttered, Minimal */}

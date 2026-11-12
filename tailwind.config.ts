@@ -11,14 +11,32 @@ const config: Config = {
     extend: {
       colors: {
         cream: {
-          50: "#FDFAF5",
-          100: "#FBF6EE",
-          200: "#F5EAD8",
-          300: "#EDDAC0",
+          50: "#FFFDF9",
+          100: "#FFF8EF",
+          200: "#F6E7D0",
+          300: "#E9C9A0",
           400: "#E3C8A4",
           500: "#D4B184",
-          DEFAULT: "#FBF6EE",
+          DEFAULT: "#FFF8EF",
         },
+        sand: {
+          50: "#FCF6ED",
+          100: "#F6E7D0",
+          200: "#ECD7BA",
+          DEFAULT: "#F6E7D0",
+        },
+        caramel: {
+          DEFAULT: "#E9C9A0",
+          100: "#F4DFBF",
+          200: "#E9C9A0",
+          300: "#D6B07F",
+        },
+        ink: {
+          DEFAULT: "#3B2314",
+          soft: "#5A3A25",
+          muted: "#7A563D",
+        },
+        "gold-deep": "#A8791F",
         espresso: {
           800: "#361E14",
           900: "#2B1810",

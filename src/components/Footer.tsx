@@ -18,7 +18,7 @@ import { coursesList } from "@/data/courses";
 
 export default function Footer() {
   return (
-    <footer className="bg-espresso-950 text-cream-200 border-t border-gold-500/25 relative overflow-hidden">
+    <footer className="bg-[#4A2E1B] text-cream-200 border-t border-[#E9C9A0]/25 relative overflow-hidden">
       {/* Decorative top gold glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-gold-400/60 to-transparent" />
 
@@ -64,7 +64,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Follow IGBCA on Instagram"
-                  className="w-10 h-10 rounded-full bg-espresso-900 border border-gold-500/30 flex items-center justify-center text-cream-200 hover:bg-gold-500 hover:text-espresso-950 hover:border-gold-400 hover:-translate-y-1 transition-all duration-300 shadow-sm"
+                  className="w-10 h-10 rounded-full bg-[#3B2314] border border-[#E9C9A0]/30 flex items-center justify-center text-cream-200 hover:bg-gold-500 hover:text-espresso-950 hover:border-gold-400 hover:-translate-y-1 transition-all duration-300 shadow-sm"
                 >
                   <Instagram className="w-4 h-4" />
                 </a>

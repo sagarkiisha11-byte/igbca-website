@@ -25,7 +25,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 
 export default function WhyChooseSection() {
   return (
-    <section className="py-20 md:py-28 lg:py-32 bg-cream-100 text-espresso-950">
+    <section className="py-20 md:py-28 lg:py-32 bg-[#F6E7D0] text-[#3B2314]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <SectionHeading
@@ -55,17 +55,17 @@ export default function WhyChooseSection() {
               >
                 <TiltCard
                   maxTilt={5}
-                  className="bg-white rounded-2xl p-7 border border-gold-500/20 shadow-sm hover:shadow-luxury transition-all duration-300 flex flex-col h-full group"
+                  className="bg-white rounded-2xl p-7 border border-[#E9C9A0]/60 shadow-sm hover:shadow-luxury hover:border-gold-400/60 transition-all duration-300 flex flex-col h-full group"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-400/30 flex items-center justify-center text-gold-600 mb-5 group-hover:bg-gold-500 group-hover:text-espresso-950 transition-colors shadow-sm">
+                  <div className="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-400/30 flex items-center justify-center text-[#A8791F] mb-5 group-hover:bg-gold-500 group-hover:text-[#3B2314] transition-colors shadow-sm">
                     <Icon className="w-6 h-6" />
                   </div>
 
-                  <h3 className="font-serif text-lg sm:text-xl font-bold text-espresso-950 mb-2.5 group-hover:text-gold-700 transition-colors">
+                  <h3 className="font-serif text-lg sm:text-xl font-bold text-[#3B2314] mb-2.5 group-hover:text-[#A8791F] transition-colors">
                     {feature.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-espresso-700 leading-relaxed font-light">
+                  <p className="text-xs sm:text-sm text-[#5A3A25] leading-relaxed font-light">
                     {feature.description}
                   </p>
                 </TiltCard>

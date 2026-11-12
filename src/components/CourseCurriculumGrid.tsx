@@ -67,7 +67,7 @@ export default function CourseCurriculumGrid({
               onClick={() => setSelectedTag(tag as string)}
               className={`px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
                 selectedTag === tag
-                  ? "bg-espresso-950 text-gold-300 shadow-sm"
+                  ? "bg-[#3B2314] text-[#C9A24A] shadow-sm"
                   : "bg-white text-espresso-700 border border-gold-500/20 hover:border-gold-500/40"
               }`}
             >
@@ -94,7 +94,7 @@ export default function CourseCurriculumGrid({
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 {mod.tag && (
-                  <div className="absolute top-2.5 right-2.5 bg-espresso-950/80 backdrop-blur-md px-2.5 py-0.5 rounded-full text-[10px] uppercase tracking-wider text-gold-300 font-medium border border-gold-400/30">
+                  <div className="absolute top-2.5 right-2.5 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full text-[10px] uppercase tracking-wider text-[#A8791F] font-semibold border border-[#E9C9A0]/60 shadow-sm">
                     {mod.tag}
                   </div>
                 )}

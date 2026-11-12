@@ -36,19 +36,19 @@ export default function CoursesPage() {
   return (
     <div className="bg-cream-100 text-espresso-950 min-h-screen">
       {/* Header */}
-      <section className="bg-espresso-950 text-cream-100 py-16 sm:py-20 relative overflow-hidden border-b border-gold-500/20">
+      <section className="bg-[#F6E7D0] text-[#3B2314] py-16 sm:py-20 relative overflow-hidden border-b border-[#E9C9A0]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <Breadcrumb items={[{ name: "All Programs", url: "/courses" }]} />
 
           <div className="max-w-3xl mt-6">
-            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold mb-3">
+            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-[#A8791F] font-semibold mb-3">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Professional Curriculum</span>
             </div>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-cream-50 tracking-tight leading-tight">
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#3B2314] tracking-tight leading-tight">
               Baking & Patisserie Programs
             </h1>
-            <p className="mt-4 text-cream-300 text-base sm:text-lg font-light leading-relaxed">
+            <p className="mt-4 text-[#5A3A25] text-base sm:text-lg font-light leading-relaxed">
               Explore our structured diplomas, fast-track certificates, and
               hands-on masterclasses conducted in our Sector 36D Chandigarh studio.
             </p>
@@ -89,7 +89,7 @@ export default function CoursesPage() {
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-espresso-950/70 via-transparent to-transparent lg:hidden" />
-                <div className="absolute top-4 left-4 bg-espresso-950/90 text-gold-300 border border-gold-400/40 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider backdrop-blur-md">
+                <div className="absolute top-4 left-4 bg-white/95 text-[#A8791F] border border-[#E9C9A0]/60 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider backdrop-blur-md shadow-sm">
                   {course.badge}
                 </div>
               </div>
@@ -164,7 +164,7 @@ export default function CoursesPage() {
                     </Link>
                     <button
                       onClick={() => openEnquiryModal(course.title)}
-                      className="btn-gold-shine px-5 py-2.5 rounded-xl bg-espresso-950 hover:bg-gold-500 text-gold-400 hover:text-espresso-950 text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 shadow-sm"
+                      className="btn-gold-shine px-5 py-2.5 rounded-xl bg-[#3B2314] hover:bg-gold-500 text-gold-300 hover:text-[#3B2314] text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 shadow-sm"
                     >
                       <Send className="w-3.5 h-3.5" />
                       <span>Apply</span>
@@ -194,7 +194,7 @@ export default function CoursesPage() {
 
           <div className="bg-white rounded-2xl border border-gold-500/25 shadow-luxury overflow-x-auto">
             <table className="w-full text-left text-xs sm:text-sm">
-              <thead className="bg-espresso-950 text-cream-100 uppercase tracking-wider text-[11px] font-semibold border-b border-gold-500/30">
+              <thead className="bg-[#3B2314] text-cream-100 uppercase tracking-wider text-[11px] font-semibold border-b border-[#E9C9A0]/40">
                 <tr>
                   <th className="p-4 sm:p-5">Program</th>
                   <th className="p-4 sm:p-5">Duration</th>
@@ -261,7 +261,7 @@ export default function CoursesPage() {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
                   selectedCategory === cat
-                    ? "bg-espresso-950 text-gold-300 shadow-sm"
+                    ? "bg-[#3B2314] text-[#C9A24A] shadow-sm"
                     : "bg-white text-espresso-800 border border-gold-500/20 hover:border-gold-500/40"
                 }`}
               >
@@ -309,7 +309,7 @@ export default function CoursesPage() {
 
                 <button
                   onClick={() => openEnquiryModal(`Short Course - ${w.name}`)}
-                  className="px-3.5 py-1.5 rounded-lg bg-espresso-950 hover:bg-gold-500 text-gold-400 hover:text-espresso-950 text-xs font-semibold transition-all flex items-center gap-1"
+                  className="px-3.5 py-1.5 rounded-lg bg-[#3B2314] hover:bg-gold-500 text-gold-300 hover:text-[#3B2314] text-xs font-semibold transition-all flex items-center gap-1"
                 >
                   <span>Enquire</span>
                   <Send className="w-3 h-3" />
@@ -358,7 +358,7 @@ export default function CoursesPage() {
               <div className="pt-2">
                 <button
                   onClick={() => openEnquiryModal()}
-                  className="btn-gold-shine px-6 py-2.5 rounded-xl bg-espresso-950 text-gold-400 font-bold text-xs uppercase tracking-wider"
+                  className="btn-gold-shine px-6 py-2.5 rounded-xl bg-[#3B2314] text-gold-300 font-bold text-xs uppercase tracking-wider"
                 >
                   Book Free Counselling
                 </button>

@@ -63,8 +63,8 @@ export default function ContactPage() {
 
   return (
     <div className="bg-cream-100 text-espresso-950 min-h-screen">
-      {/* Header with Cinematic Background Video */}
-      <section className="bg-espresso-950 text-cream-100 py-18 sm:py-24 relative overflow-hidden border-b border-gold-500/20">
+      {/* Header with Background Video */}
+      <section className="bg-[#F6E7D0] text-[#3B2314] py-18 sm:py-24 relative overflow-hidden border-b border-[#E9C9A0]/60">
         {/* Background Video */}
         <video
           autoPlay
@@ -72,27 +72,27 @@ export default function ContactPage() {
           muted
           playsInline
           poster="https://igbca.in/wp-content/uploads/2024/08/hero-2.jpg"
-          className="absolute inset-0 w-full h-full object-cover opacity-25"
+          className="absolute inset-0 w-full h-full object-cover opacity-15"
         >
           <source
             src="https://igbca.in/wp-content/uploads/2023/07/pexels_videos_2795731-540p.mp4"
             type="video/mp4"
           />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-t from-espresso-950 via-espresso-950/80 to-espresso-950/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#F6E7D0] via-[#F6E7D0]/80 to-[#F6E7D0]/60" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <Breadcrumb items={[{ name: "Contact & Visit", url: "/contact" }]} />
 
           <div className="max-w-3xl mt-6">
-            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold mb-3">
+            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-[#A8791F] font-semibold mb-3">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Chandigarh Studio</span>
             </div>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-cream-50 tracking-tight leading-tight">
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#3B2314] tracking-tight leading-tight">
               Get in Touch with IGBCA
             </h1>
-            <p className="mt-4 text-cream-300 text-base sm:text-lg font-light leading-relaxed">
+            <p className="mt-4 text-[#5A3A25] text-base sm:text-lg font-light leading-relaxed">
               Have questions regarding curricula, seat availability, fees, or
               want to tour our studio? Submit your enquiry below or message us on
               WhatsApp.
@@ -298,32 +298,32 @@ export default function ContactPage() {
 
           {/* Right Column: Contact Cards & Studio Info (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-espresso-950 text-cream-100 rounded-3xl p-6 sm:p-8 border border-gold-500/30 shadow-luxury space-y-6">
+            <div className="bg-white text-[#3B2314] rounded-3xl p-6 sm:p-8 border border-[#E9C9A0]/60 shadow-luxury space-y-6">
               <div>
-                <span className="text-[10px] uppercase tracking-widest text-gold-400 font-semibold block">
+                <span className="text-[10px] uppercase tracking-widest text-[#A8791F] font-semibold block">
                   Studio Headquarters
                 </span>
-                <h3 className="font-serif text-2xl font-bold text-cream-50 mt-1">
+                <h3 className="font-serif text-2xl font-bold text-[#3B2314] mt-1">
                   Visit Us in Chandigarh
                 </h3>
               </div>
 
-              <div className="space-y-4 text-xs sm:text-sm text-cream-200">
+              <div className="space-y-4 text-xs sm:text-sm text-[#5A3A25]">
                 <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-gold-400 shrink-0 mt-0.5" />
+                  <MapPin className="w-5 h-5 text-[#A8791F] shrink-0 mt-0.5" />
                   <div>
-                    <div className="font-semibold text-cream-100">Address</div>
-                    <div className="text-cream-300">{siteConfig.address.full}</div>
+                    <div className="font-semibold text-[#3B2314]">Address</div>
+                    <div className="text-[#5A3A25]">{siteConfig.address.full}</div>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-gold-400 shrink-0 mt-0.5" />
+                  <Phone className="w-5 h-5 text-[#A8791F] shrink-0 mt-0.5" />
                   <div>
-                    <div className="font-semibold text-cream-100">Call Academy</div>
+                    <div className="font-semibold text-[#3B2314]">Call Academy</div>
                     <a
                       href={siteConfig.contact.phoneTel}
-                      className="text-gold-400 hover:text-gold-300 font-medium"
+                      className="text-[#A8791F] hover:text-[#3B2314] font-medium"
                     >
                       {siteConfig.contact.phone}
                     </a>
@@ -331,14 +331,14 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <MessageCircle className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                  <MessageCircle className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
                   <div>
-                    <div className="font-semibold text-cream-100">WhatsApp Desk</div>
+                    <div className="font-semibold text-[#3B2314]">WhatsApp Desk</div>
                     <a
                       href={siteConfig.contact.whatsappLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-emerald-300 hover:text-emerald-200 font-medium"
+                      className="text-emerald-700 hover:text-emerald-800 font-medium"
                     >
                       {siteConfig.contact.whatsapp}
                     </a>
@@ -346,12 +346,12 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-gold-400 shrink-0 mt-0.5" />
+                  <Mail className="w-5 h-5 text-[#A8791F] shrink-0 mt-0.5" />
                   <div>
-                    <div className="font-semibold text-cream-100">Email Inquiries</div>
+                    <div className="font-semibold text-[#3B2314]">Email Inquiries</div>
                     <a
                       href={`mailto:${siteConfig.contact.email}`}
-                      className="text-cream-300 hover:text-gold-300"
+                      className="text-[#5A3A25] hover:text-[#A8791F]"
                     >
                       {siteConfig.contact.email}
                     </a>
@@ -359,20 +359,20 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Clock className="w-5 h-5 text-gold-400 shrink-0 mt-0.5" />
+                  <Clock className="w-5 h-5 text-[#A8791F] shrink-0 mt-0.5" />
                   <div>
-                    <div className="font-semibold text-cream-100">Academy Hours</div>
-                    <div className="text-cream-300">{siteConfig.contact.timings}</div>
+                    <div className="font-semibold text-[#3B2314]">Academy Hours</div>
+                    <div className="text-[#5A3A25]">{siteConfig.contact.timings}</div>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-gold-500/20">
+              <div className="pt-4 border-t border-[#E9C9A0]/40">
                 <a
                   href={siteConfig.contact.whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-semibold text-xs uppercase tracking-wider transition-colors"
+                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs uppercase tracking-wider transition-colors shadow-sm"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span>Instant WhatsApp Counselling</span>
@@ -381,7 +381,7 @@ export default function ContactPage() {
             </div>
 
             {/* Embedded Google Map */}
-            <div className="rounded-3xl overflow-hidden border border-gold-500/30 shadow-luxury h-72 relative bg-espresso-950">
+            <div className="rounded-3xl overflow-hidden border border-[#E9C9A0]/60 shadow-luxury h-72 relative bg-[#F6E7D0]">
               <iframe
                 src={siteConfig.googleMapsEmbedUrl}
                 width="100%"

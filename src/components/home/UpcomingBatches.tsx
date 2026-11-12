@@ -10,14 +10,14 @@ export default function UpcomingBatches() {
   const { openEnquiryModal } = useEnquiry();
 
   return (
-    <section className="py-20 md:py-28 lg:py-32 bg-cream-100 text-espresso-950">
+    <section className="py-20 md:py-28 lg:py-32 bg-[#F6E7D0] text-[#3B2314]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-white rounded-2xl p-8 sm:p-12 border border-gold-500/25 shadow-luxury relative overflow-hidden"
+          className="bg-white rounded-2xl p-8 sm:p-12 border border-[#E9C9A0]/60 shadow-luxury relative overflow-hidden"
         >
           {/* Decorative Corner Gold Accent */}
           <div className="absolute top-0 right-0 w-32 h-32 bg-gold-500/10 rounded-bl-full pointer-events-none" />

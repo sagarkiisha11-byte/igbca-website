@@ -26,19 +26,19 @@ export default function AboutPage() {
   return (
     <div className="bg-cream-100 text-espresso-950 min-h-screen">
       {/* Hero Header */}
-      <section className="bg-espresso-950 text-cream-100 py-16 sm:py-24 relative overflow-hidden border-b border-gold-500/20">
+      <section className="bg-[#F6E7D0] text-[#3B2314] py-16 sm:py-24 relative overflow-hidden border-b border-[#E9C9A0]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <Breadcrumb items={[{ name: "About Us", url: "/about" }]} />
 
           <div className="max-w-3xl mt-6">
-            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold mb-3">
+            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-[#A8791F] font-semibold mb-3">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Artisanal Tradition & Precision</span>
             </div>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-cream-50 tracking-tight leading-tight">
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#3B2314] tracking-tight leading-tight">
               Nurturing the Next Generation of Master Bakers
             </h1>
-            <p className="mt-4 text-cream-300 text-base sm:text-lg font-light leading-relaxed">
+            <p className="mt-4 text-[#5A3A25] text-base sm:text-lg font-light leading-relaxed">
               At IGBCA Chandigarh, we combine classical European and Russian
               patisserie methodologies with contemporary commercial bakery
               operations.
@@ -156,7 +156,7 @@ export default function AboutPage() {
                 idx % 2 === 1 ? "lg:flex-row-reverse" : ""
               }`}
             >
-              <div className="lg:col-span-4 relative h-80 sm:h-96 rounded-2xl overflow-hidden border border-gold-500/30 bg-espresso-950">
+              <div className="lg:col-span-4 relative h-80 sm:h-96 rounded-2xl overflow-hidden border border-[#E9C9A0]/60 bg-[#F6E7D0]">
                 <Image
                   src={chef.photo}
                   alt={chef.name}
@@ -202,12 +202,12 @@ export default function AboutPage() {
       </section>
 
       {/* Facilities & Studio Standards */}
-      <section className="py-16 bg-espresso-950 text-cream-100">
+      <section className="py-16 bg-[#F6E7D0] border-t border-[#E9C9A0]/60 text-[#3B2314]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
-          <h3 className="font-serif text-2xl sm:text-3xl font-bold text-cream-50">
+          <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#3B2314]">
             Visit Our Sector 36D Studio
           </h3>
-          <p className="mt-3 text-cream-300 text-sm sm:text-base leading-relaxed font-light">
+          <p className="mt-3 text-[#5A3A25] text-sm sm:text-base leading-relaxed font-light">
             We operate {siteConfig.business.hours.daysThrough}, {siteConfig.business.hours.timeTo}. Book a
             one-on-one counselling session to tour our commercial deck ovens,
             tempering stations, and kitchen workstations.
@@ -215,13 +215,13 @@ export default function AboutPage() {
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
               href="/contact"
-              className="btn-gold-shine px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-500 to-gold-400 text-espresso-950 font-bold text-xs uppercase tracking-wider shadow-gold-glow"
+              className="btn-gold-shine px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-500 to-gold-400 text-[#3B2314] font-bold text-xs uppercase tracking-wider shadow-gold-glow"
             >
               Contact Admissions
             </Link>
             <Link
               href="/courses"
-              className="px-8 py-3.5 rounded-full border border-gold-500/40 text-cream-200 hover:text-gold-300 text-xs font-semibold uppercase tracking-wider"
+              className="px-8 py-3.5 rounded-full border border-[#E9C9A0] bg-white text-[#3B2314] hover:bg-[#F6E7D0]/50 text-xs font-semibold uppercase tracking-wider"
             >
               Browse Programs
             </Link>

@@ -48,7 +48,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <div className="bg-cream-100 text-espresso-950 min-h-screen">
       {/* Header */}
-      <section className="bg-espresso-950 text-cream-100 py-16 sm:py-20 relative overflow-hidden border-b border-gold-500/20">
+      <section className="bg-[#F6E7D0] text-[#3B2314] py-16 sm:py-20 relative overflow-hidden border-b border-[#E9C9A0]/60">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <Breadcrumb
             items={[
@@ -58,22 +58,22 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           />
 
           <div className="mt-8 space-y-4">
-            <span className="inline-block px-3 py-1 rounded-full bg-gold-500/20 text-gold-300 text-xs font-semibold uppercase tracking-wider border border-gold-400/40">
+            <span className="inline-block px-3 py-1 rounded-full bg-[#FFF8EF] text-[#A8791F] text-xs font-semibold uppercase tracking-wider border border-[#E9C9A0]/60">
               {post.category}
             </span>
 
-            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-cream-50 tracking-tight leading-tight">
+            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#3B2314] tracking-tight leading-tight">
               {post.title}
             </h1>
 
-            <div className="flex flex-wrap items-center gap-4 text-xs text-cream-300 pt-2 border-t border-gold-500/20">
+            <div className="flex flex-wrap items-center gap-4 text-xs text-[#5A3A25] pt-2 border-t border-[#E9C9A0]/40">
               <span className="flex items-center gap-1.5">
-                <User className="w-3.5 h-3.5 text-gold-400" />
+                <User className="w-3.5 h-3.5 text-[#A8791F]" />
                 By {post.author}
               </span>
               <span>•</span>
               <span className="flex items-center gap-1.5">
-                <Clock className="w-3.5 h-3.5 text-gold-400" />
+                <Clock className="w-3.5 h-3.5 text-[#A8791F]" />
                 {post.readTime}
               </span>
               <span>•</span>
@@ -110,7 +110,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
         {/* Author signature box */}
         <div className="mt-14 p-6 sm:p-8 rounded-2xl bg-white border border-gold-500/25 shadow-sm flex flex-col sm:flex-row items-center gap-6">
-          <div className="w-16 h-16 rounded-full bg-espresso-950 text-gold-400 font-serif text-2xl font-bold flex items-center justify-center shrink-0 border border-gold-400/40">
+          <div className="w-16 h-16 rounded-full bg-[#3B2314] text-[#C9A24A] font-serif text-2xl font-bold flex items-center justify-center shrink-0 border border-gold-400/40">
             {post.author.charAt(0)}
           </div>
           <div className="space-y-1 text-center sm:text-left">

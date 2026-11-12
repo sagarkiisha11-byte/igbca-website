@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Sparkles, ArrowRight, HeartHandshake, ChefHat, Store } from "lucide-react";
+import { ArrowRight, HeartHandshake, ChefHat, Store } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { useEnquiry } from "@/context/EnquiryContext";
 import SectionHeading from "@/components/animations/SectionHeading";
@@ -13,7 +13,7 @@ export default function BakeYourWaySection() {
   const { openEnquiryModal } = useEnquiry();
 
   return (
-    <section className="py-20 md:py-28 lg:py-32 bg-espresso-950 text-cream-100 relative overflow-hidden">
+    <section className="py-20 md:py-28 lg:py-32 bg-[#FFF8EF] text-[#3B2314] relative overflow-hidden">
       {/* Decorative background lines */}
       <div className="absolute inset-0 bg-[radial-gradient(#C8963E_1px,transparent_1px)] [background-size:24px_24px] opacity-10 pointer-events-none" />
 
@@ -30,7 +30,7 @@ export default function BakeYourWaySection() {
               }
               description={siteConfig.about.bakeYourWay}
               align="left"
-              theme="dark"
+              theme="cream"
               className="mb-6"
             />
 
@@ -41,13 +41,13 @@ export default function BakeYourWaySection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15, margin: "0px 0px -10% 0px" }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="bg-espresso-900/80 border border-gold-500/20 p-5 rounded-2xl hover:border-gold-400/50 transition-colors"
+                className="bg-white border border-[#E9C9A0]/60 p-5 rounded-2xl shadow-sm hover:border-gold-400 hover:shadow-luxury transition-all"
               >
-                <Store className="w-5 h-5 text-gold-400 mb-2" />
-                <h4 className="font-serif text-sm font-semibold text-cream-100">
+                <Store className="w-5 h-5 text-[#A8791F] mb-2" />
+                <h4 className="font-serif text-sm font-semibold text-[#3B2314]">
                   Launch Your Bakery
                 </h4>
-                <p className="text-[11px] text-cream-400 mt-1 leading-normal">
+                <p className="text-[11px] text-[#5A3A25] mt-1 leading-normal">
                   Master commercial costing, equipment layout, and high-volume production.
                 </p>
               </motion.div>
@@ -57,13 +57,13 @@ export default function BakeYourWaySection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15, margin: "0px 0px -10% 0px" }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="bg-espresso-900/80 border border-gold-500/20 p-5 rounded-2xl hover:border-gold-400/50 transition-colors"
+                className="bg-white border border-[#E9C9A0]/60 p-5 rounded-2xl shadow-sm hover:border-gold-400 hover:shadow-luxury transition-all"
               >
-                <ChefHat className="w-5 h-5 text-gold-400 mb-2" />
-                <h4 className="font-serif text-sm font-semibold text-cream-100">
-                  Hotel & Fine Dining
+                <ChefHat className="w-5 h-5 text-[#A8791F] mb-2" />
+                <h4 className="font-serif text-sm font-semibold text-[#3B2314]">
+                  Hotel &amp; Fine Dining
                 </h4>
-                <p className="text-[11px] text-cream-400 mt-1 leading-normal">
+                <p className="text-[11px] text-[#5A3A25] mt-1 leading-normal">
                   Develop fine-dining plated desserts, entremets, and showpiece displays.
                 </p>
               </motion.div>
@@ -73,13 +73,13 @@ export default function BakeYourWaySection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15, margin: "0px 0px -10% 0px" }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="bg-espresso-900/80 border border-gold-500/20 p-5 rounded-2xl hover:border-gold-400/50 transition-colors"
+                className="bg-white border border-[#E9C9A0]/60 p-5 rounded-2xl shadow-sm hover:border-gold-400 hover:shadow-luxury transition-all"
               >
-                <HeartHandshake className="w-5 h-5 text-gold-400 mb-2" />
-                <h4 className="font-serif text-sm font-semibold text-cream-100">
+                <HeartHandshake className="w-5 h-5 text-[#A8791F] mb-2" />
+                <h4 className="font-serif text-sm font-semibold text-[#3B2314]">
                   Pure Baking Joy
                 </h4>
-                <p className="text-[11px] text-cream-400 mt-1 leading-normal">
+                <p className="text-[11px] text-[#5A3A25] mt-1 leading-normal">
                   Perfect artisanal sourdoughs, croissants, and celebration cakes for passion.
                 </p>
               </motion.div>
@@ -89,16 +89,16 @@ export default function BakeYourWaySection() {
             <div className="pt-4 flex flex-wrap items-center gap-4">
               <button
                 onClick={() => openEnquiryModal()}
-                className="btn-gold-shine px-6 sm:px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-espresso-950 font-bold text-xs uppercase tracking-widest shadow-gold-glow"
+                className="btn-gold-shine px-6 sm:px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-[#3B2314] font-bold text-xs uppercase tracking-widest shadow-gold-glow"
               >
                 Start Your Journey Today
               </button>
               <Link
                 href="/gallery"
-                className="btn-glass-outline inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-xs uppercase tracking-widest font-semibold"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-[#E9C9A0] bg-white text-[#3B2314] hover:bg-[#F6E7D0]/50 hover:border-gold-400 text-xs uppercase tracking-widest font-semibold transition-all shadow-sm"
               >
                 <span>View Student Work</span>
-                <ArrowRight className="w-4 h-4 text-gold-400" />
+                <ArrowRight className="w-4 h-4 text-[#A8791F]" />
               </Link>
             </div>
           </div>
@@ -113,7 +113,7 @@ export default function BakeYourWaySection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.15 }}
                   transition={{ duration: 0.5 }}
-                  className="relative h-44 sm:h-52 rounded-2xl overflow-hidden border border-gold-500/30 shadow-luxury hover:-translate-y-1 hover:border-gold-400/60 transition-all duration-300 group"
+                  className="relative h-44 sm:h-52 rounded-2xl overflow-hidden border border-[#E9C9A0]/60 shadow-luxury hover:-translate-y-1 hover:border-gold-400/60 transition-all duration-300 group"
                 >
                   <Image
                     src="https://igbca.in/wp-content/uploads/2024/07/cookies.jpg"
@@ -122,7 +122,7 @@ export default function BakeYourWaySection() {
                     sizes="(max-width: 768px) 50vw, 25vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-espresso-950/60 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-espresso-950/40 via-transparent to-transparent" />
                 </motion.div>
 
                 {/* Image 2: Artisan Breads */}
@@ -131,7 +131,7 @@ export default function BakeYourWaySection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.15 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  className="relative h-56 sm:h-64 rounded-2xl overflow-hidden border border-gold-500/30 shadow-luxury hover:-translate-y-1 hover:border-gold-400/60 transition-all duration-300 group"
+                  className="relative h-56 sm:h-64 rounded-2xl overflow-hidden border border-[#E9C9A0]/60 shadow-luxury hover:-translate-y-1 hover:border-gold-400/60 transition-all duration-300 group"
                 >
                   <Image
                     src="https://igbca.in/wp-content/uploads/2024/07/Artisan-Plain-Breads.jpg"
@@ -140,7 +140,7 @@ export default function BakeYourWaySection() {
                     sizes="(max-width: 768px) 50vw, 25vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-espresso-950/60 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-espresso-950/40 via-transparent to-transparent" />
                 </motion.div>
               </div>
 
@@ -151,7 +151,7 @@ export default function BakeYourWaySection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.15 }}
                   transition={{ duration: 0.5, delay: 0.15 }}
-                  className="relative h-56 sm:h-64 rounded-2xl overflow-hidden border border-gold-500/30 shadow-luxury hover:-translate-y-1 hover:border-gold-400/60 transition-all duration-300 group"
+                  className="relative h-56 sm:h-64 rounded-2xl overflow-hidden border border-[#E9C9A0]/60 shadow-luxury hover:-translate-y-1 hover:border-gold-400/60 transition-all duration-300 group"
                 >
                   <Image
                     src="https://igbca.in/wp-content/uploads/2024/07/Puffs-Viennoseries.jpg"
@@ -160,7 +160,7 @@ export default function BakeYourWaySection() {
                     sizes="(max-width: 768px) 50vw, 25vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-espresso-950/60 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-espresso-950/40 via-transparent to-transparent" />
                 </motion.div>
 
                 {/* Image 4: Cheesecake */}
@@ -169,7 +169,7 @@ export default function BakeYourWaySection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.15 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="relative h-44 sm:h-52 rounded-2xl overflow-hidden border border-gold-500/30 shadow-luxury hover:-translate-y-1 hover:border-gold-400/60 transition-all duration-300 group"
+                  className="relative h-44 sm:h-52 rounded-2xl overflow-hidden border border-[#E9C9A0]/60 shadow-luxury hover:-translate-y-1 hover:border-gold-400/60 transition-all duration-300 group"
                 >
                   <Image
                     src="https://igbca.in/wp-content/uploads/2024/07/cheese-cake.jpg"
@@ -178,7 +178,7 @@ export default function BakeYourWaySection() {
                     sizes="(max-width: 768px) 50vw, 25vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-espresso-950/60 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-espresso-950/40 via-transparent to-transparent" />
                 </motion.div>
               </div>
             </div>

@@ -15,7 +15,7 @@ export default function InstructorsSection() {
   };
 
   return (
-    <section className="py-20 md:py-28 lg:py-32 bg-espresso-950 text-cream-100 relative overflow-hidden">
+    <section className="py-20 md:py-28 lg:py-32 bg-[#FFF8EF] text-[#3B2314] relative overflow-hidden">
       {/* Subtle background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
 
@@ -29,7 +29,7 @@ export default function InstructorsSection() {
             </>
           }
           description="Learn directly from seasoned mentors who bring international pedagogies, European baking institute disciplines, and decades of practical bench artistry to Chandigarh."
-          theme="dark"
+          theme="cream"
         />
 
         {/* 2 Vertical Cards Grid */}
@@ -44,10 +44,10 @@ export default function InstructorsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15, margin: "0px 0px -10% 0px" }}
                 transition={{ duration: 0.5, delay: idx * 0.15 }}
-                className="bg-espresso-900/80 border border-gold-500/30 rounded-2xl overflow-hidden shadow-luxury flex flex-col h-full group hover:-translate-y-1 hover:border-gold-400/60 transition-all duration-300 max-w-[520px] mx-auto w-full"
+                className="bg-white border border-[#E9C9A0]/60 rounded-2xl overflow-hidden shadow-luxury flex flex-col h-full group hover:-translate-y-1 hover:border-gold-400/60 transition-all duration-300 max-w-[520px] mx-auto w-full"
               >
                 {/* Image Wrapper - Fixed portrait-friendly aspect ratio */}
-                <div className="relative w-full aspect-[4/5] overflow-hidden bg-espresso-950">
+                <div className="relative w-full aspect-[4/5] overflow-hidden bg-[#F6E7D0]">
                   <Image
                     src={instructor.photo}
                     alt={instructor.name}
@@ -58,21 +58,21 @@ export default function InstructorsSection() {
                     quality={85}
                     style={{ objectPosition: instructor.focalPoint || "50% 20%" }}
                   />
-                  {/* Soft bottom gradient overlay blending into card */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-espresso-900 via-espresso-900/40 to-transparent" />
+                  {/* Soft bottom gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#3B2314]/70 via-[#3B2314]/20 to-transparent" />
 
                   {/* Role pill overlaid over the bottom of photo / gradient */}
                   <div className="absolute bottom-4 left-6 sm:left-8 z-10">
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-espresso-950/90 backdrop-blur-md border border-gold-400/40 text-[11px] uppercase tracking-wider text-gold-300 font-semibold shadow-md">
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#3B2314]/90 backdrop-blur-md border border-gold-400/40 text-[11px] uppercase tracking-wider text-gold-300 font-semibold shadow-md">
                       <Award className="w-3.5 h-3.5 text-gold-400" />
                       <span>{instructor.role}</span>
                     </div>
                   </div>
                 </div>
 
-                {/* Card Content Area - flex-1 with mt-auto on checklist for equal height */}
+                {/* Card Content Area */}
                 <div className="flex flex-col flex-1 p-6 lg:p-8">
-                  <h3 className="font-serif text-2xl lg:text-3xl font-bold text-cream-50 group-hover:text-gold-300 transition-colors">
+                  <h3 className="font-serif text-2xl lg:text-3xl font-bold text-[#3B2314] group-hover:text-[#A8791F] transition-colors">
                     {instructor.name}
                   </h3>
 
@@ -85,7 +85,7 @@ export default function InstructorsSection() {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.25 }}
-                        className={`text-sm lg:text-base leading-relaxed text-cream-300 font-light ${
+                        className={`text-sm lg:text-base leading-relaxed text-[#5A3A25] font-light ${
                           isExpanded ? "" : "line-clamp-6"
                         }`}
                       >
@@ -96,40 +96,37 @@ export default function InstructorsSection() {
                     {instructor.bio.length > 280 && (
                       <button
                         onClick={() => toggleBio(instructor.id)}
-                        className="mt-2 text-xs text-gold-400 hover:text-gold-300 font-semibold inline-flex items-center gap-1 transition-colors"
+                        className="mt-2 text-xs text-[#A8791F] hover:text-[#3B2314] font-semibold inline-flex items-center gap-1 transition-colors"
                       >
-                        <span>{isExpanded ? "Show Less" : "Read Full Story"}</span>
                         {isExpanded ? (
-                          <ChevronUp className="w-3.5 h-3.5" />
+                          <>
+                            <span>Show Less</span>
+                            <ChevronUp className="w-3.5 h-3.5" />
+                          </>
                         ) : (
-                          <ChevronDown className="w-3.5 h-3.5" />
+                          <>
+                            <span>Read Full Bio</span>
+                            <ChevronDown className="w-3.5 h-3.5" />
+                          </>
                         )}
                       </button>
                     )}
                   </div>
 
-                  {/* Highlights / Credentials - with animated tick-in */}
-                  {instructor.credentials && (
-                    <div className="mt-auto pt-6 border-t border-gold-500/20 space-y-2.5">
-                      {instructor.credentials.map((cred, cIdx) => (
-                        <motion.div
+                  {/* Credentials / Key Highlights Checklist */}
+                  {instructor.credentials && instructor.credentials.length > 0 && (
+                    <div className="mt-6 pt-5 border-t border-[#E9C9A0]/50 space-y-2.5">
+                      <div className="text-xs uppercase tracking-wider text-[#A8791F] font-semibold mb-3">
+                        Core Expertise &amp; Credentials
+                      </div>
+                      {instructor.credentials.map((cred) => (
+                        <div
                           key={cred}
-                          initial={{ opacity: 0, x: -10 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ delay: 0.3 + cIdx * 0.1, duration: 0.4 }}
-                          className="flex items-center gap-2.5 text-xs sm:text-sm text-gold-300"
+                          className="flex items-start gap-2.5 text-xs text-[#3B2314]"
                         >
-                          <motion.div
-                            initial={{ scale: 0 }}
-                            whileInView={{ scale: [0, 1.25, 1] }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.35 + cIdx * 0.1, duration: 0.35 }}
-                          >
-                            <CheckCircle2 className="w-4 h-4 text-gold-400 shrink-0" />
-                          </motion.div>
-                          <span>{cred}</span>
-                        </motion.div>
+                          <CheckCircle2 className="w-4 h-4 text-[#A8791F] shrink-0 mt-0.5" />
+                          <span className="font-medium">{cred}</span>
+                        </div>
                       ))}
                     </div>
                   )}

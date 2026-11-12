@@ -7,7 +7,6 @@ import {
   Phone,
   MessageCircle,
   Clock,
-  Sparkles,
 } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { useEnquiry } from "@/context/EnquiryContext";
@@ -18,7 +17,7 @@ export default function FinalCtaSection() {
   const { openEnquiryModal } = useEnquiry();
 
   return (
-    <section className="py-20 md:py-28 lg:py-32 bg-espresso-950 text-cream-100 relative overflow-hidden">
+    <section className="py-20 md:py-28 lg:py-32 bg-[#FFF8EF] text-[#3B2314] relative overflow-hidden">
       {/* Slow gold light sweep animated gradient */}
       <motion.div
         aria-hidden="true"
@@ -46,7 +45,7 @@ export default function FinalCtaSection() {
               </>
             }
             description="Step into our commercial kitchen studio at SCO 218, Sector 36D. Consult directly with Chef Ranjana & Chef Siddhant."
-            theme="dark"
+            theme="cream"
             className="mb-8"
           />
 
@@ -54,7 +53,7 @@ export default function FinalCtaSection() {
             <Magnetic strength={8}>
               <button
                 onClick={() => openEnquiryModal()}
-                className="btn-gold-shine w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-espresso-950 font-bold text-xs uppercase tracking-widest shadow-gold-glow hover:shadow-2xl transition-all"
+                className="btn-gold-shine w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-[#3B2314] font-bold text-xs uppercase tracking-widest shadow-gold-glow hover:shadow-2xl transition-all"
               >
                 Enquire For Next Batch
               </button>
@@ -77,12 +76,12 @@ export default function FinalCtaSection() {
         {/* Map & Location Details Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Studio Details Card (5 cols) */}
-          <div className="lg:col-span-5 bg-espresso-900/90 border border-gold-500/30 rounded-2xl p-6 sm:p-8 flex flex-col justify-between space-y-6">
+          <div className="lg:col-span-5 bg-white border border-[#E9C9A0]/60 rounded-2xl p-6 sm:p-8 flex flex-col justify-between space-y-6 shadow-luxury text-[#3B2314]">
             <div>
-              <h3 className="font-serif text-xl sm:text-2xl font-bold text-cream-50 mb-2">
+              <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#3B2314] mb-2">
                 Central Chandigarh Academy
               </h3>
-              <p className="text-cream-300 text-xs sm:text-sm font-light leading-relaxed">
+              <p className="text-[#5A3A25] text-xs sm:text-sm font-light leading-relaxed">
                 Centrally located in Sector 36D, accessible easily from Mohali,
                 Panchkula, and the wider Tricity.
               </p>
@@ -90,12 +89,12 @@ export default function FinalCtaSection() {
 
             <div className="space-y-4 text-xs sm:text-sm">
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-gold-400 shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-[#A8791F] shrink-0 mt-0.5" />
                 <div>
-                  <span className="font-semibold text-cream-100 block">
+                  <span className="font-semibold text-[#3B2314] block">
                     Address
                   </span>
-                  <span className="text-cream-300">
+                  <span className="text-[#5A3A25]">
                     {siteConfig.address.street}, {siteConfig.address.sector},{" "}
                     {siteConfig.address.city} – {siteConfig.address.pincode}
                   </span>
@@ -103,26 +102,26 @@ export default function FinalCtaSection() {
               </div>
 
               <div className="flex items-start gap-3">
-                <Clock className="w-5 h-5 text-gold-400 shrink-0 mt-0.5" />
+                <Clock className="w-5 h-5 text-[#A8791F] shrink-0 mt-0.5" />
                 <div>
-                  <span className="font-semibold text-cream-100 block">
+                  <span className="font-semibold text-[#3B2314] block">
                     Studio Operational Hours
                   </span>
-                  <span className="text-cream-300">
+                  <span className="text-[#5A3A25]">
                     {siteConfig.business.hours.daysLong} • {siteConfig.business.hours.time}
                   </span>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-gold-400 shrink-0 mt-0.5" />
+                <Phone className="w-5 h-5 text-[#A8791F] shrink-0 mt-0.5" />
                 <div>
-                  <span className="font-semibold text-cream-100 block">
-                    Phone & Admissions Desk
+                  <span className="font-semibold text-[#3B2314] block">
+                    Phone &amp; Admissions Desk
                   </span>
                   <a
                     href={siteConfig.contact.phoneTel}
-                    className="text-gold-300 hover:underline"
+                    className="text-[#A8791F] hover:underline font-medium"
                   >
                     {siteConfig.contact.phone}
                   </a>
@@ -130,13 +129,13 @@ export default function FinalCtaSection() {
               </div>
             </div>
 
-            <div className="pt-4 border-t border-gold-500/20 flex items-center justify-between">
-              <span className="text-xs text-cream-400">
+            <div className="pt-4 border-t border-[#E9C9A0]/40 flex items-center justify-between">
+              <span className="text-xs text-[#5A3A25]/70">
                 Studio visits by prior appointment
               </span>
               <button
                 onClick={() => openEnquiryModal()}
-                className="text-xs font-semibold text-gold-400 hover:text-gold-300 underline underline-offset-4"
+                className="text-xs font-semibold text-[#A8791F] hover:text-[#3B2314] underline underline-offset-4"
               >
                 Schedule Tour
               </button>
@@ -144,7 +143,7 @@ export default function FinalCtaSection() {
           </div>
 
           {/* Embedded Google Map (7 cols) */}
-          <div className="lg:col-span-7 rounded-2xl overflow-hidden border border-gold-500/30 shadow-luxury h-[380px] sm:h-[420px] relative">
+          <div className="lg:col-span-7 rounded-2xl overflow-hidden border border-[#E9C9A0]/60 shadow-luxury h-[380px] sm:h-[420px] relative">
             <iframe
               src={siteConfig.googleMapsEmbedUrl}
               width="100%"

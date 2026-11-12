@@ -34,19 +34,19 @@ export default function FAQPage() {
   return (
     <div className="bg-cream-100 text-espresso-950 min-h-screen">
       {/* Header */}
-      <section className="bg-espresso-950 text-cream-100 py-16 sm:py-20 relative overflow-hidden border-b border-gold-500/20">
+      <section className="bg-[#F6E7D0] text-[#3B2314] py-16 sm:py-20 relative overflow-hidden border-b border-[#E9C9A0]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <Breadcrumb items={[{ name: "Admissions FAQ", url: "/faq" }]} />
 
           <div className="max-w-3xl mt-6">
-            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold mb-3">
+            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-[#A8791F] font-semibold mb-3">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Everything You Need to Know</span>
             </div>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-cream-50 tracking-tight leading-tight">
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#3B2314] tracking-tight leading-tight">
               Frequently Asked Questions
             </h1>
-            <p className="mt-4 text-cream-300 text-base sm:text-lg font-light leading-relaxed">
+            <p className="mt-4 text-[#5A3A25] text-base sm:text-lg font-light leading-relaxed">
               Find answers regarding admissions eligibility, course timings, chef
               uniforms, ingredients, and certification at IGBCA Chandigarh.
             </p>
@@ -67,7 +67,7 @@ export default function FAQPage() {
               }}
               className={`px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
                 activeCategory === cat
-                  ? "bg-espresso-950 text-gold-300 shadow-sm"
+                  ? "bg-[#3B2314] text-[#C9A24A] shadow-sm"
                   : "bg-white text-espresso-800 border border-gold-500/20 hover:border-gold-500/40"
               }`}
             >
@@ -96,8 +96,8 @@ export default function FAQPage() {
                   <div
                     className={`w-9 h-9 rounded-full border border-gold-500/30 flex items-center justify-center shrink-0 transition-all duration-300 ${
                       isOpen
-                        ? "rotate-180 bg-espresso-950 text-gold-400 border-gold-400/60 shadow-sm"
-                        : "text-espresso-800 bg-cream-100 hover:border-gold-500/50"
+                        ? "rotate-180 bg-[#3B2314] text-gold-400 border-gold-400/60 shadow-sm"
+                        : "text-[#3B2314] bg-[#FFF8EF] hover:border-gold-500/50"
                     }`}
                   >
                     <ChevronDown className="w-4 h-4 transition-transform duration-300" />
@@ -125,18 +125,18 @@ export default function FAQPage() {
         </div>
 
         {/* Still have questions card */}
-        <div className="mt-16 bg-espresso-950 text-cream-100 rounded-3xl p-8 sm:p-10 border border-gold-500/30 text-center shadow-luxury">
-          <h3 className="font-serif text-2xl font-bold text-cream-50">
+        <div className="mt-16 bg-[#F6E7D0] text-[#3B2314] rounded-3xl p-8 sm:p-10 border border-[#E9C9A0] text-center shadow-luxury">
+          <h3 className="font-serif text-2xl font-bold text-[#3B2314]">
             Have a Specific Question We Didn&apos;t Answer?
           </h3>
-          <p className="mt-2 text-cream-300 text-xs sm:text-sm max-w-lg mx-auto font-light">
+          <p className="mt-2 text-[#5A3A25] text-xs sm:text-sm max-w-lg mx-auto font-light">
             Our admissions counsellors are available on phone or WhatsApp {siteConfig.business.hours.daysThrough} from {siteConfig.business.hours.timeTo}.
           </p>
 
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
             <button
               onClick={() => openEnquiryModal()}
-              className="btn-gold-shine px-6 py-3 rounded-full bg-gradient-to-r from-gold-500 to-gold-400 text-espresso-950 font-bold text-xs uppercase tracking-wider shadow-gold-glow"
+              className="btn-gold-shine px-6 py-3 rounded-full bg-gradient-to-r from-gold-500 to-gold-400 text-[#3B2314] font-bold text-xs uppercase tracking-wider shadow-gold-glow"
             >
               Submit an Enquiry
             </button>
@@ -144,7 +144,7 @@ export default function FAQPage() {
               href={siteConfig.contact.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 rounded-full bg-emerald-700 hover:bg-emerald-600 text-white font-semibold text-xs uppercase tracking-wider flex items-center gap-2"
+              className="px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs uppercase tracking-wider flex items-center gap-2 shadow-sm"
             >
               <MessageCircle className="w-4 h-4" />
               <span>Chat on WhatsApp</span>

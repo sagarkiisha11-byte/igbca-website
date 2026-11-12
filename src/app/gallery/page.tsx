@@ -56,19 +56,19 @@ export default function GalleryPage() {
   return (
     <div className="bg-cream-100 text-espresso-950 min-h-screen">
       {/* Header */}
-      <section className="bg-espresso-950 text-cream-100 py-16 sm:py-20 relative overflow-hidden border-b border-gold-500/20">
+      <section className="bg-[#F6E7D0] text-[#3B2314] py-16 sm:py-20 relative overflow-hidden border-b border-[#E9C9A0]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <Breadcrumb items={[{ name: "Studio Gallery", url: "/gallery" }]} />
 
           <div className="max-w-3xl mt-6">
-            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold mb-3">
+            <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-[#A8791F] font-semibold mb-3">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Visual Journey</span>
             </div>
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-cream-50 tracking-tight leading-tight">
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-[#3B2314] tracking-tight leading-tight">
               Inside Our Baking Studio
             </h1>
-            <p className="mt-4 text-cream-300 text-base sm:text-lg font-light leading-relaxed">
+            <p className="mt-4 text-[#5A3A25] text-base sm:text-lg font-light leading-relaxed">
               Explore authentic glimpses of student bakes, French viennoiseries,
               artisan crusts, multi-tier wedding cakes, and master patisserie
               sessions at Sector 36D, Chandigarh.
@@ -88,7 +88,7 @@ export default function GalleryPage() {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
                   activeCategory === cat
-                    ? "bg-espresso-950 text-gold-300 shadow-sm"
+                    ? "bg-[#3B2314] text-[#C9A24A] shadow-sm"
                     : "bg-white text-espresso-800 border border-gold-500/20 hover:border-gold-500/40"
                 }`}
               >
