@@ -22,6 +22,8 @@ export interface BusinessHours {
   daysDash: string;
   time: string;
   timeTo: string;
+  open: string;
+  close: string;
   opens: string;
   closes: string;
   daysJsonLd: string[];
@@ -109,7 +111,7 @@ export const siteConfig: SiteConfig = {
     whatsappLink:
       "https://wa.me/918264353936?text=Hi%20IGBCA,%20I%20would%20like%20to%20know%20about%20your%20baking%20courses",
     email: "info@igbca.in",
-    timings: "Monday – Friday, 9:00 AM – 4:00 PM",
+    timings: "Monday – Friday, 9:30 AM – 6:30 PM",
   },
   business: {
     hours: {
@@ -117,10 +119,12 @@ export const siteConfig: SiteConfig = {
       daysLong: "Monday to Friday",
       daysThrough: "Monday through Friday",
       daysDash: "Monday – Friday",
-      time: "9:00 AM – 4:00 PM",
-      timeTo: "9:00 AM to 4:00 PM",
-      opens: "09:00",
-      closes: "16:00",
+      time: "9:30 AM – 6:30 PM",
+      timeTo: "9:30 AM to 6:30 PM",
+      open: "9:30 AM",
+      close: "6:30 PM",
+      opens: "09:30",
+      closes: "18:30",
       daysJsonLd: [
         "Monday",
         "Tuesday",
@@ -135,10 +139,12 @@ export const siteConfig: SiteConfig = {
     daysLong: "Monday to Friday",
     daysThrough: "Monday through Friday",
     daysDash: "Monday – Friday",
-    time: "9:00 AM – 4:00 PM",
-    timeTo: "9:00 AM to 4:00 PM",
-    opens: "09:00",
-    closes: "16:00",
+    time: "9:30 AM – 6:30 PM",
+    timeTo: "9:30 AM to 6:30 PM",
+    open: "9:30 AM",
+    close: "6:30 PM",
+    opens: "09:30",
+    closes: "18:30",
     daysJsonLd: [
       "Monday",
       "Tuesday",
